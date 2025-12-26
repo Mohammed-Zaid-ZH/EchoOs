@@ -11,16 +11,35 @@ import logging
 from pathlib import Path
 from datetime import datetime
 
+from .universal_keybindings import UniversalKeybindings
+from .universal_filesystem import UniversalFileSystem
+
 class Executor:
-    def __init__(self, tts, auth=None):
+    def __init__(self, tts, auth=None, ui_automator=None):
         self.tts = tts
         self.auth = auth
-        self.current_directory = os.getcwd()
+        self.ui_automator = ui_automator
+        
+        # Initialize universal systems
+        self.keybindings = UniversalKeybindings()
+        self.filesystem = UniversalFileSystem()
+        
+        self.current_directory = self.filesystem.get_current_directory()
         self.logger = logging.getLogger(__name__)
 
     def execute(self, command):
         """Execute a command based on action dictionary"""
         if not command or 'action' not in command:
+            return False
+        
+        # Check authentication before executing any command
+        if self.auth and not self.auth.is_authenticated():
+            self.tts.say("Please authenticate first by clicking 'Wake / Authenticate'")
+            return False
+        
+        # Check session validity
+        if self.auth and not self.auth.is_session_valid():
+            self.tts.say("Session expired. Please authenticate again.")
             return False
         
         action = command['action']
@@ -93,6 +112,93 @@ class Executor:
                 return self.wake()
             elif action == "pause_listening":
                 return self.pause_listening()
+            elif action == "open_file_explorer":
+                return self.open_file_explorer()
+            
+            # Context-aware commands
+            elif action == "navigate_folder":
+                return self.navigate_folder(command.get('target', ''))
+            elif action == "create_folder":
+                return self.create_folder(command.get('folder_name', 'New Folder'))
+            elif action == "delete_item":
+                return self.delete_item(command.get('target', ''))
+            elif action == "rename_item":
+                return self.rename_item(command.get('new_name', ''))
+            elif action == "select_item":
+                return self.select_item(command.get('target', ''))
+            elif action == "copy_item":
+                return self.copy_item(command.get('target', ''))
+            elif action == "paste_item":
+                return self.paste_item()
+            elif action == "cut_item":
+                return self.cut_item(command.get('target', ''))
+            
+            # Browser commands
+            elif action == "navigate_url":
+                return self.navigate_url(command.get('url', ''))
+            elif action == "search_query":
+                return self.search_query(command.get('query', ''))
+            elif action == "new_tab":
+                return self.new_tab()
+            elif action == "close_tab":
+                return self.close_tab()
+            elif action == "next_tab":
+                return self.next_tab()
+            elif action == "previous_tab":
+                return self.previous_tab()
+            elif action == "go_back":
+                return self.go_back()
+            elif action == "go_forward":
+                return self.go_forward()
+            elif action == "refresh_page":
+                return self.refresh_page()
+            elif action == "bookmark_page":
+                return self.bookmark_page()
+            
+            # Text editor commands
+            elif action == "save_file":
+                return self.save_file()
+            elif action == "save_as":
+                return self.save_as(command.get('filename', ''))
+            elif action == "open_file":
+                return self.open_file(command.get('filename', ''))
+            elif action == "new_file":
+                return self.new_file()
+            elif action == "find_text":
+                return self.find_text(command.get('search_text', ''))
+            elif action == "find_replace":
+                return self.find_replace()
+            elif action == "select_all":
+                return self.select_all()
+            elif action == "copy_text":
+                return self.copy_text()
+            elif action == "cut_text":
+                return self.cut_text()
+            elif action == "paste_text":
+                return self.paste_text()
+            
+            # UI automation commands
+            elif action == "click_element":
+                return self.click_element(command.get('target', ''))
+            elif action == "double_click_element":
+                return self.double_click_element(command.get('target', ''))
+            elif action == "right_click_element":
+                return self.right_click_element(command.get('target', ''))
+            elif action == "type_text":
+                return self.type_text(command.get('text', ''))
+            elif action == "scroll":
+                return self.scroll(command.get('direction', 'down'))
+            elif action == "zoom":
+                return self.zoom(command.get('direction', 'in'))
+            elif action == "close_window":
+                return self.close_window()
+            elif action == "minimize_window":
+                return self.minimize_window()
+            elif action == "maximize_window":
+                return self.maximize_window()
+            elif action == "switch_window":
+                return self.switch_window()
+            
             else:
                 self.tts.say("I don't know how to handle that command.")
                 return False
@@ -240,12 +346,16 @@ class Executor:
         webbrowser.open(url)
 
     def search_amazon(self, query):
-        url = f"https://www.amazon.in/s?k={query}"
+        import urllib.parse
+        encoded_query = urllib.parse.quote_plus(query)
+        url = f"https://www.amazon.in/s?k={encoded_query}"
         self.tts.say(f"Searching Amazon for {query}, sir.")
         webbrowser.open(url)
 
     def search_swiggy(self, query):
-        url = f"https://www.swiggy.com/search?query={query}"
+        import urllib.parse
+        encoded_query = urllib.parse.quote_plus(query)
+        url = f"https://www.swiggy.com/search?query={encoded_query}"
         self.tts.say(f"Searching Swiggy for {query}, sir.")
         webbrowser.open(url)
 
@@ -262,7 +372,9 @@ class Executor:
         if not query:
             self.tts.say("What would you like me to search for?")
             return False
-        url = f"https://www.google.com/search?q={query}"
+        import urllib.parse
+        encoded_query = urllib.parse.quote_plus(query)
+        url = f"https://www.google.com/search?q={encoded_query}"
         self.tts.say(f"Searching Google for {query}.")
         webbrowser.open(url)
         return True
@@ -272,7 +384,9 @@ class Executor:
         if not query:
             self.tts.say("What would you like me to search for on YouTube?")
             return False
-        url = f"https://www.youtube.com/results?search_query={query}"
+        import urllib.parse
+        encoded_query = urllib.parse.quote_plus(query)
+        url = f"https://www.youtube.com/results?search_query={encoded_query}"
         self.tts.say(f"Searching YouTube for {query}.")
         webbrowser.open(url)
         return True
@@ -601,6 +715,28 @@ class Executor:
         """Pause voice listening"""
         self.tts.say("Going to sleep. Call me when you need me.")
         return True
+    
+    def open_file_explorer(self):
+        """Open file explorer"""
+        try:
+            if os.name == "nt":  # Windows
+                os.system("start explorer")
+                self.tts.say("File explorer opened")
+                return True
+            elif os.name == "posix":  # macOS/Linux
+                if sys.platform == "darwin":  # macOS
+                    os.system("open .")
+                else:  # Linux
+                    os.system("xdg-open .")
+                self.tts.say("File explorer opened")
+                return True
+            else:
+                self.tts.say("File explorer not supported on this system")
+                return False
+        except Exception as e:
+            self.logger.error(f"Error opening file explorer: {e}")
+            self.tts.say("Sorry, I couldn't open file explorer")
+            return False
 
     def close_all_apps(self):
         """Close all applications except EchoOS"""
@@ -827,4 +963,641 @@ class Executor:
                 
         except Exception as e:
             self.tts.say(f"Could not close browser tabs. Error: {e}")
+            return False
+    
+    # Context-aware File Explorer commands
+    def navigate_folder(self, folder_name):
+        """Navigate to a folder using universal filesystem"""
+        try:
+            success, result = self.filesystem.navigate_to_directory(folder_name)
+            if success:
+                self.current_directory = result
+                self.tts.say(f"Navigated to {folder_name}")
+                return True
+            else:
+                self.tts.say(f"Could not navigate to {folder_name}: {result}")
+                return False
+        except Exception as e:
+            self.logger.error(f"Error navigating to folder: {e}")
+            self.tts.say("Sorry, I couldn't navigate to that folder")
+            return False
+    
+    def create_folder(self, folder_name):
+        """Create a new folder using universal filesystem"""
+        try:
+            success, result = self.filesystem.create_directory(folder_name)
+            if success:
+                self.tts.say(f"Created folder {folder_name}")
+                return True
+            else:
+                self.tts.say(f"Could not create folder {folder_name}: {result}")
+                return False
+        except Exception as e:
+            self.logger.error(f"Error creating folder: {e}")
+            self.tts.say("Sorry, I couldn't create that folder")
+            return False
+    
+    def delete_item(self, item_name):
+        """Delete an item"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            # Find and select item
+            item_element = self.ui_automator.find_element_by_text(item_name)
+            if item_element:
+                self.ui_automator.click_element(item_element)
+                time.sleep(0.5)
+                
+                # Press delete key
+                self.ui_automator.press_key('delete')
+                self.tts.say(f"Deleted {item_name}")
+                return True
+            else:
+                self.tts.say(f"Could not find {item_name}")
+                return False
+        except Exception as e:
+            self.logger.error(f"Error deleting item: {e}")
+            self.tts.say("Sorry, I couldn't delete that item")
+            return False
+    
+    def rename_item(self, new_name):
+        """Rename selected item"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            # Press F2 to rename
+            self.ui_automator.press_key('f2')
+            time.sleep(0.5)
+            
+            # Type new name
+            self.ui_automator.type_text(new_name)
+            self.ui_automator.press_key('enter')
+            
+            self.tts.say(f"Renamed to {new_name}")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error renaming item: {e}")
+            self.tts.say("Sorry, I couldn't rename that item")
+            return False
+    
+    def select_item(self, item_name):
+        """Select an item"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            item_element = self.ui_automator.find_element_by_text(item_name)
+            if item_element:
+                self.ui_automator.click_element(item_element)
+                self.tts.say(f"Selected {item_name}")
+                return True
+            else:
+                self.tts.say(f"Could not find {item_name}")
+                return False
+        except Exception as e:
+            self.logger.error(f"Error selecting item: {e}")
+            return False
+    
+    def copy_item(self, item_name):
+        """Copy an item"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            # Select item first
+            if item_name:
+                self.select_item(item_name)
+            
+            # Copy (Ctrl+C)
+            self.ui_automator.press_key('ctrl+c')
+            self.tts.say("Copied")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error copying item: {e}")
+            return False
+    
+    def paste_item(self):
+        """Paste copied item"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            # Paste (Ctrl+V)
+            self.ui_automator.press_key('ctrl+v')
+            self.tts.say("Pasted")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error pasting item: {e}")
+            return False
+    
+    def cut_item(self, item_name):
+        """Cut an item"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            # Select item first
+            if item_name:
+                self.select_item(item_name)
+            
+            # Cut (Ctrl+X)
+            self.ui_automator.press_key('ctrl+x')
+            self.tts.say("Cut")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error cutting item: {e}")
+            return False
+    
+    # Browser commands
+    def navigate_url(self, url):
+        """Navigate to URL in browser"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            # Click address bar (Ctrl+L)
+            self.ui_automator.press_key('ctrl+l')
+            time.sleep(0.5)
+            
+            # Type URL
+            self.ui_automator.type_text(url)
+            self.ui_automator.press_key('enter')
+            
+            self.tts.say(f"Navigating to {url}")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error navigating to URL: {e}")
+            return False
+    
+    def search_query(self, query):
+        """Search in browser"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            # Click search box or use Ctrl+K
+            self.ui_automator.press_key('ctrl+k')
+            time.sleep(0.5)
+            
+            # Type search query
+            self.ui_automator.type_text(query)
+            self.ui_automator.press_key('enter')
+            
+            self.tts.say(f"Searching for {query}")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error searching: {e}")
+            return False
+    
+    def new_tab(self):
+        """Open new tab in browser"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('ctrl+t')
+            self.tts.say("Opened new tab")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error opening new tab: {e}")
+            return False
+    
+    def close_tab(self):
+        """Close current tab"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('ctrl+w')
+            self.tts.say("Closed tab")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error closing tab: {e}")
+            return False
+    
+    def next_tab(self):
+        """Switch to next tab"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('ctrl+tab')
+            return True
+        except Exception as e:
+            self.logger.error(f"Error switching to next tab: {e}")
+            return False
+    
+    def previous_tab(self):
+        """Switch to previous tab"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('ctrl+shift+tab')
+            return True
+        except Exception as e:
+            self.logger.error(f"Error switching to previous tab: {e}")
+            return False
+    
+    def go_back(self):
+        """Go back in browser"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('alt+left')
+            return True
+        except Exception as e:
+            self.logger.error(f"Error going back: {e}")
+            return False
+    
+    def go_forward(self):
+        """Go forward in browser"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('alt+right')
+            return True
+        except Exception as e:
+            self.logger.error(f"Error going forward: {e}")
+            return False
+    
+    def refresh_page(self):
+        """Refresh current page"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('f5')
+            self.tts.say("Refreshed page")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error refreshing page: {e}")
+            return False
+    
+    def bookmark_page(self):
+        """Bookmark current page"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('ctrl+d')
+            self.tts.say("Bookmarked page")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error bookmarking page: {e}")
+            return False
+    
+    # Text editor commands
+    def save_file(self):
+        """Save current file using universal keybindings"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            shortcut = self.keybindings.get_shortcut("save")
+            if shortcut:
+                self.ui_automator.press_key(shortcut)
+                self.tts.say("File saved")
+                return True
+            else:
+                self.tts.say("Save shortcut not available")
+                return False
+        except Exception as e:
+            self.logger.error(f"Error saving file: {e}")
+            return False
+    
+    def save_as(self, filename):
+        """Save file with new name"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            # Open Save As dialog
+            self.ui_automator.press_key('ctrl+shift+s')
+            time.sleep(1)
+            
+            # Type filename
+            self.ui_automator.type_text(filename)
+            self.ui_automator.press_key('enter')
+            
+            self.tts.say(f"Saved as {filename}")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error saving file as: {e}")
+            return False
+    
+    def open_file(self, filename):
+        """Open file"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            # Open file dialog
+            self.ui_automator.press_key('ctrl+o')
+            time.sleep(1)
+            
+            # Type filename
+            self.ui_automator.type_text(filename)
+            self.ui_automator.press_key('enter')
+            
+            self.tts.say(f"Opened {filename}")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error opening file: {e}")
+            return False
+    
+    def new_file(self):
+        """Create new file"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('ctrl+n')
+            self.tts.say("Created new file")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error creating new file: {e}")
+            return False
+    
+    def find_text(self, search_text):
+        """Find text in document"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            # Open find dialog
+            self.ui_automator.press_key('ctrl+f')
+            time.sleep(0.5)
+            
+            # Type search text
+            self.ui_automator.type_text(search_text)
+            
+            self.tts.say(f"Searching for {search_text}")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error finding text: {e}")
+            return False
+    
+    def find_replace(self):
+        """Open find and replace dialog"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('ctrl+h')
+            self.tts.say("Find and replace opened")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error opening find and replace: {e}")
+            return False
+    
+    def select_all(self):
+        """Select all text"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('ctrl+a')
+            self.tts.say("Selected all")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error selecting all: {e}")
+            return False
+    
+    def copy_text(self):
+        """Copy selected text"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('ctrl+c')
+            self.tts.say("Copied text")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error copying text: {e}")
+            return False
+    
+    def cut_text(self):
+        """Cut selected text"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('ctrl+x')
+            self.tts.say("Cut text")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error cutting text: {e}")
+            return False
+    
+    def paste_text(self):
+        """Paste text"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('ctrl+v')
+            self.tts.say("Pasted text")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error pasting text: {e}")
+            return False
+    
+    # UI automation commands
+    def click_element(self, target):
+        """Click on an element"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            # Find element by text
+            element = self.ui_automator.find_element_by_text(target)
+            if element:
+                self.ui_automator.click_element(element)
+                self.tts.say(f"Clicked {target}")
+                return True
+            else:
+                self.tts.say(f"Could not find {target}")
+                return False
+        except Exception as e:
+            self.logger.error(f"Error clicking element: {e}")
+            return False
+    
+    def double_click_element(self, target):
+        """Double click on an element"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            element = self.ui_automator.find_element_by_text(target)
+            if element:
+                # Double click using pyautogui
+                import pyautogui
+                pyautogui.doubleClick(element.center_x, element.center_y)
+                self.tts.say(f"Double clicked {target}")
+                return True
+            else:
+                self.tts.say(f"Could not find {target}")
+                return False
+        except Exception as e:
+            self.logger.error(f"Error double clicking element: {e}")
+            return False
+    
+    def right_click_element(self, target):
+        """Right click on an element"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            element = self.ui_automator.find_element_by_text(target)
+            if element:
+                # Right click using pyautogui
+                import pyautogui
+                pyautogui.rightClick(element.center_x, element.center_y)
+                self.tts.say(f"Right clicked {target}")
+                return True
+            else:
+                self.tts.say(f"Could not find {target}")
+                return False
+        except Exception as e:
+            self.logger.error(f"Error right clicking element: {e}")
+            return False
+    
+    def type_text(self, text):
+        """Type text at current cursor position"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.type_text(text)
+            self.tts.say(f"Typed: {text}")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error typing text: {e}")
+            return False
+    
+    def scroll(self, direction):
+        """Scroll in specified direction"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.scroll(direction)
+            self.tts.say(f"Scrolled {direction}")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error scrolling: {e}")
+            return False
+    
+    def zoom(self, direction):
+        """Zoom in or out"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            if direction == "in":
+                self.ui_automator.press_key('ctrl+plus')
+            else:
+                self.ui_automator.press_key('ctrl+minus')
+            
+            self.tts.say(f"Zoomed {direction}")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error zooming: {e}")
+            return False
+    
+    def close_window(self):
+        """Close current window"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('alt+f4')
+            self.tts.say("Closed window")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error closing window: {e}")
+            return False
+    
+    def minimize_window(self):
+        """Minimize current window"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('alt+space')
+            time.sleep(0.2)
+            self.ui_automator.press_key('n')
+            self.tts.say("Minimized window")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error minimizing window: {e}")
+            return False
+    
+    def maximize_window(self):
+        """Maximize current window"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('alt+space')
+            time.sleep(0.2)
+            self.ui_automator.press_key('x')
+            self.tts.say("Maximized window")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error maximizing window: {e}")
+            return False
+    
+    def switch_window(self):
+        """Switch between windows"""
+        if not self.ui_automator:
+            self.tts.say("UI automation not available")
+            return False
+        
+        try:
+            self.ui_automator.press_key('alt+tab')
+            self.tts.say("Switched window")
+            return True
+        except Exception as e:
+            self.logger.error(f"Error switching window: {e}")
             return False

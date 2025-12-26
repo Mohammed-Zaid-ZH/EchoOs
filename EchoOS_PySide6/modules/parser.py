@@ -17,7 +17,14 @@ class CommandParser:
             import json
             if os.path.exists(self.commands_file):
                 with open(self.commands_file, 'r') as f:
-                    return json.load(f)
+                    data = json.load(f)
+                    # Check if it's the new format with system_control key
+                    if "system_control" in data:
+                        return data
+                    else:
+                        # It's the old format, ignore it and use defaults
+                        print(f"Old format commands.json detected, using default patterns")
+                        pass
         except Exception as e:
             print(f"Error loading command patterns: {e}")
         
@@ -29,14 +36,16 @@ class CommandParser:
             ],
             "file_operations": [
                 "open file", "create file", "delete file", "copy file", "move file", "rename file",
-                "list files", "show files", "navigate to", "go to folder", "create folder", "delete folder"
+                "list files", "show files", "navigate to", "go to folder", "create folder", "delete folder",
+                "open file explorer", "file explorer", "save file"
             ],
             "application_control": [
                 "open app", "launch", "start", "go to", "switch to", "bring to front",
                 "close app", "close all tabs", "close all windows", 
                 "close browser tabs", "close chrome tabs", "close firefox tabs", "close edge tabs",
                 "close paint", "close word", "close excel", "close powerpoint", "close notepad",
-                "minimize", "maximize", "switch app", "new tab", "new window"
+                "minimize", "maximize", "switch app", "new tab", "new window",
+                "open chrome", "open firefox", "open edge", "open notepad", "open paint"
             ],
             "web_operations": [
                 "open website", "search google", "search youtube", "search amazon", "search swiggy",
@@ -138,6 +147,10 @@ class CommandParser:
         elif "delete folder" in text:
             folder_name = self._extract_filename(text)
             return {"action": "delete_folder", "folder_name": folder_name, "confirm": True}
+        elif "save file" in text:
+            return {"action": "save_file"}
+        elif any(w in text for w in ["open file explorer", "file explorer"]):
+            return {"action": "open_file_explorer"}
         return None
 
     def _parse_application_control(self, text, apps):
@@ -167,6 +180,18 @@ class CommandParser:
             return {"action": "close_specific_app", "app": "powerpnt"}
         elif "close notepad" in text:
             return {"action": "close_specific_app", "app": "notepad"}
+        
+        # Open specific applications
+        elif "open chrome" in text:
+            return {"action": "open_app", "app": {"name": "chrome", "exec": "chrome.exe"}}
+        elif "open firefox" in text:
+            return {"action": "open_app", "app": {"name": "firefox", "exec": "firefox.exe"}}
+        elif "open edge" in text:
+            return {"action": "open_app", "app": {"name": "edge", "exec": "msedge.exe"}}
+        elif "open notepad" in text:
+            return {"action": "open_app", "app": {"name": "notepad", "exec": "notepad.exe"}}
+        elif "open paint" in text:
+            return {"action": "open_app", "app": {"name": "paint", "exec": "mspaint.exe"}}
         
         # Generic close app
         elif "close app" in text:

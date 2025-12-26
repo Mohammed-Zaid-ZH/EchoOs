@@ -21,11 +21,25 @@ from modules.tts import TTS
 from modules.auth import Authenticator
 from modules.app_discovery import AppDiscovery
 from modules.parser import CommandParser
+from modules.context_parser import ContextAwareParser
 from modules.executor import Executor
 from modules.accessibility import AccessibilityManager
+from modules.ui_automation import UniversalUIAutomator
+from modules.universal_config import UniversalConfig
+from modules.universal_command_executor import UniversalCommandExecutor
+from modules.enhanced_stt import EnhancedSTT
+from modules.simple_screen_analyzer import SimpleScreenAnalyzer
+from modules.advanced_screen_analyzer import AdvancedScreenAnalyzer
+from modules.universal_executor_v2 import UniversalExecutorV2
 
-CONFIG_DIR = pathlib.Path("config")
+# Initialize universal configuration
+universal_config = UniversalConfig()
+universal_config.create_directories()
+
+CONFIG_DIR = pathlib.Path(universal_config.get("system.config_dir", "config"))
 CONFIG_DIR.mkdir(exist_ok=True)
+
+# Create legacy config files for backward compatibility
 if not (CONFIG_DIR/"commands.json").exists():
     (CONFIG_DIR/"commands.json").write_text(json.dumps({
         "open": ["open","launch","start"],
@@ -74,14 +88,32 @@ def main():
         logger.info("Initializing app discovery...")
         app_disc = AppDiscovery()
         
-        logger.info("Initializing speech recognition...")
-        stt_mgr = VoskManager(tts=tts)
+        logger.info("Initializing enhanced speech recognition...")
+        stt_mgr = EnhancedSTT(tts=tts)
+        
+        logger.info("Initializing simple screen analyzer...")
+        screen_analyzer = SimpleScreenAnalyzer(tts=tts)
+        
+        logger.info("Initializing advanced screen analyzer...")
+        advanced_screen_analyzer = AdvancedScreenAnalyzer(tts=tts)
+        
+        logger.info("Initializing UI automation...")
+        ui_automator = UniversalUIAutomator(tts=tts)
         
         logger.info("Initializing command parser...")
         parser = CommandParser(tts=tts)
         
-        logger.info("Initializing command executor...")
-        executor = Executor(tts=tts, auth=auth)
+        logger.info("Initializing context-aware parser...")
+        context_parser = ContextAwareParser(tts=tts, ui_automator=ui_automator)
+        
+        logger.info("Initializing universal command executor...")
+        universal_executor = UniversalCommandExecutor(tts=tts, auth=auth)
+        
+        logger.info("Initializing universal executor V2...")
+        universal_executor_v2 = UniversalExecutorV2(tts=tts, screen_analyzer=advanced_screen_analyzer, app_discovery=app_disc, auth=auth)
+        
+        logger.info("Initializing legacy command executor...")
+        executor = Executor(tts=tts, auth=auth, ui_automator=ui_automator)
         
         logger.info("Initializing accessibility manager...")
         accessibility = AccessibilityManager(tts=tts)
@@ -91,7 +123,7 @@ def main():
         
         # Create main window (FAST STARTUP)
         logger.info("Creating main window...")
-        win = EchoMainWindow(auth, stt_mgr, app_disc, parser, executor, tts, accessibility)
+        win = EchoMainWindow(auth, stt_mgr, app_disc, context_parser, executor, tts, accessibility, universal_executor, screen_analyzer, advanced_screen_analyzer, universal_executor_v2)
         win.show()
         
         # Start app discovery in background (NON-BLOCKING)

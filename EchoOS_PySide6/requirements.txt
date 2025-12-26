@@ -1,37 +1,57 @@
 # Core GUI Framework
-PySide6
+PySide6>=6.5.0
 
 # Speech Recognition and TTS
-vosk
-sounddevice
-pyttsx3
+vosk>=0.3.45
+sounddevice>=0.4.6
+pyttsx3>=2.90
+SpeechRecognition>=3.10.0
 
 # Voice Processing and Authentication
-python_speech_features
-resemblyzer
-librosa
+python_speech_features>=0.6
+resemblyzer>=0.1.1
+librosa>=0.10.1
+soundfile>=0.12.1
 
 # Scientific Computing
-numpy
-scipy
-scikit-learn
+numpy>=1.24.3
+scipy>=1.11.1
+scikit-learn>=1.3.0
 
 # Text Processing and Matching
-rapidfuzz
+rapidfuzz>=3.1.1
 
 # System Information and Control
-psutil
+psutil>=5.9.5
 
 # Platform-specific Dependencies
 pywin32; platform_system == "Windows"
 
-# Optional Dependencies for Full Functionality
-# Uncomment these for complete accessibility features:
-# pyautogui
-# opencv-python
-# pytesseract
-# Pillow
-# pygetwindow
+# UI Automation Dependencies (Required for full voice control)
+pyautogui>=0.9.54
+pygetwindow>=0.0.9
+pyperclip>=1.8.2
+
+# Screen Analysis and OCR (Required for context awareness)
+opencv-python>=4.8.0.76
+pytesseract>=0.3.10
+Pillow>=10.0.0
+
+# Platform-specific APIs (Optional but recommended)
+pywin32>=227; platform_system == "Windows"
+pyobjc>=7.0; platform_system == "Darwin"
+
+# Enhanced OCR (Optional)
+easyocr>=1.6.0
+
+# Additional dependencies for universal command execution
+requests>=2.31.0
+
+# Performance Testing & Metrics (for research paper)
+matplotlib>=3.7.0
+numpy>=1.24.3
+scipy>=1.11.1
+jiwer>=3.0.0  # For WER calculation
 
 # Note: pathlib is part of Python standard library (3.4+)
 # Note: threading, queue, logging, datetime are standard library modules

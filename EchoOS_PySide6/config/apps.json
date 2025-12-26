@@ -23,6 +23,28 @@
       "icon": null
     },
     {
+      "name": "_testembed",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\_testembed.exe",
+      "aliases": [
+        "_testembed",
+        "_testembed",
+        "_testembed"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "_testembed",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\_testembed.exe",
+      "aliases": [
+        "_testembed",
+        "_testembed",
+        "_testembed"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
       "name": "AccCheckConsole",
       "exec": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\arm\\AccChecker\\AccCheckConsole.exe",
       "aliases": [
@@ -188,7 +210,7 @@
     },
     {
       "name": "activate",
-      "exec": "C:\\Program Files\\Python312\\Lib\\venv\\scripts\\nt\\activate.bat",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\activate.bat",
       "aliases": [
         "activate",
         "activate",
@@ -198,13 +220,36 @@
       "icon": null
     },
     {
-      "name": "AD2F1837.myHP",
-      "exec": "C:\\Users\\zaidm\\AppData\\Local\\Microsoft\\WindowsApps\\AD2F1837.myHP_v10z8vjag6ke6\\myHP.exe",
+      "name": "activate",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\python\\lib\\venv\\scripts\\nt\\activate.bat",
       "aliases": [
-        "ad2f1837.myhp",
-        "ad2f1837.myhp"
+        "activate",
+        "activate",
+        "activate"
       ],
-      "category": "store",
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "activate",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\activate.bat",
+      "aliases": [
+        "activate",
+        "activate",
+        "activate"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "activate",
+      "exec": "C:\\Program Files\\Python312\\Lib\\venv\\scripts\\nt\\activate.bat",
+      "aliases": [
+        "activate",
+        "activate",
+        "activate"
+      ],
+      "category": "program_files",
       "icon": null
     },
     {
@@ -1085,6 +1130,26 @@
       "aliases": [
         "authhost",
         "authhost"
+      ],
+      "category": "path",
+      "icon": null
+    },
+    {
+      "name": "AutoCatHost",
+      "exec": "C:\\windows\\system32\\AutoCatHost.exe",
+      "aliases": [
+        "autocathost",
+        "autocathost"
+      ],
+      "category": "path",
+      "icon": null
+    },
+    {
+      "name": "AutoCatHost",
+      "exec": "C:\\WINDOWS\\system32\\AutoCatHost.exe",
+      "aliases": [
+        "autocathost",
+        "autocathost"
       ],
       "category": "path",
       "icon": null
@@ -2046,6 +2111,17 @@
       "icon": null
     },
     {
+      "name": "ccapiserver",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\ccapiserver.exe",
+      "aliases": [
+        "ccapiserver",
+        "ccapiserver",
+        "ccapiserver"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
       "name": "cert2spc",
       "exec": "C:\\Program Files (x86)\\Windows Kits\\10\\bin\\10.0.22621.0\\arm64\\cert2spc.exe",
       "aliases": [
@@ -2381,7 +2457,7 @@
     },
     {
       "name": "chrmstp",
-      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\140.0.7339.128\\Installer\\chrmstp.exe",
+      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\143.0.7499.170\\Installer\\chrmstp.exe",
       "aliases": [
         "chrmstp",
         "chrmstp",
@@ -2414,7 +2490,7 @@
     },
     {
       "name": "chrome_pwa_launcher",
-      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\140.0.7339.128\\chrome_pwa_launcher.exe",
+      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\143.0.7499.170\\chrome_pwa_launcher.exe",
       "aliases": [
         "chrome_pwa_launcher",
         "chrome_pwa_launcher",
@@ -2658,6 +2734,50 @@
       "icon": null
     },
     {
+      "name": "cli",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\cli.exe",
+      "aliases": [
+        "cli",
+        "cli",
+        "cli"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "cli-32",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\cli-32.exe",
+      "aliases": [
+        "cli-32",
+        "cli-32",
+        "cli-32"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "cli-64",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\cli-64.exe",
+      "aliases": [
+        "cli-64",
+        "cli-64",
+        "cli-64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "cli-arm64",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\cli-arm64.exe",
+      "aliases": [
+        "cli-arm64",
+        "cli-arm64",
+        "cli-arm64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
       "name": "cliconfg",
       "exec": "C:\\windows\\system32\\cliconfg.exe",
       "aliases": [
@@ -2870,6 +2990,18 @@
         "cmake"
       ],
       "category": "portable",
+      "icon": null
+    },
+    {
+      "name": "CMake",
+      "exec": "C:\\Program Files\\CMake\\bin\\cmake-gui.exe",
+      "aliases": [
+        "cmake",
+        "cmake",
+        "cmake",
+        "cmake-gui"
+      ],
+      "category": "powershell",
       "icon": null
     },
     {
@@ -3170,7 +3302,7 @@
     },
     {
       "name": "CollectSyncLogs",
-      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.164.0824.0003\\CollectSyncLogs.bat",
+      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.222.1112.0002\\CollectSyncLogs.bat",
       "aliases": [
         "collectsynclogs",
         "collectsynclogs",
@@ -3334,6 +3466,17 @@
         "compattelrunner"
       ],
       "category": "path",
+      "icon": null
+    },
+    {
+      "name": "Compil32",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\Compil32.exe",
+      "aliases": [
+        "compil32",
+        "compil32",
+        "compil32"
+      ],
+      "category": "program_files",
       "icon": null
     },
     {
@@ -3686,7 +3829,7 @@
     },
     {
       "name": "cookie_exporter",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.81\\cookie_exporter.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\cookie_exporter.exe",
       "aliases": [
         "cookie_exporter",
         "cookie_exporter",
@@ -3697,7 +3840,7 @@
     },
     {
       "name": "cookie_exporter",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.66\\cookie_exporter.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\cookie_exporter.exe",
       "aliases": [
         "cookie_exporter",
         "cookie_exporter",
@@ -3708,7 +3851,7 @@
     },
     {
       "name": "cookie_exporter",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.81\\cookie_exporter.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\cookie_exporter.exe",
       "aliases": [
         "cookie_exporter",
         "cookie_exporter",
@@ -3718,23 +3861,56 @@
       "icon": null
     },
     {
-      "name": "cookie_exporter",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\cookie_exporter.exe",
+      "name": "copilot_setup",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\Installer\\copilot_setup.exe",
       "aliases": [
-        "cookie_exporter",
-        "cookie_exporter",
-        "cookie_exporter"
+        "copilot_setup",
+        "copilot_setup",
+        "copilot_setup"
       ],
       "category": "program_files",
       "icon": null
     },
     {
-      "name": "cookie_exporter",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.81\\cookie_exporter.exe",
+      "name": "copilot_setup",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\Installer\\copilot_setup.exe",
       "aliases": [
-        "cookie_exporter",
-        "cookie_exporter",
-        "cookie_exporter"
+        "copilot_setup",
+        "copilot_setup",
+        "copilot_setup"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "copilot_setup",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\Installer\\copilot_setup.exe",
+      "aliases": [
+        "copilot_setup",
+        "copilot_setup",
+        "copilot_setup"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "CopilotUpdate",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\CopilotUpdate.exe",
+      "aliases": [
+        "copilotupdate",
+        "copilotupdate",
+        "copilotupdate"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "CopilotUpdate",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.215.9\\CopilotUpdate.exe",
+      "aliases": [
+        "copilotupdate",
+        "copilotupdate",
+        "copilotupdate"
       ],
       "category": "program_files",
       "icon": null
@@ -4238,6 +4414,17 @@
       "icon": null
     },
     {
+      "name": "CursorSetup-x64-2.2.44",
+      "exec": "C:\\Users\\zaidm\\Downloads\\CursorSetup-x64-2.2.44.exe",
+      "aliases": [
+        "cursorsetup-x64-2.2.44",
+        "cursorsetup-x64-2.2.44",
+        "cursorsetup-x64-2.2.44"
+      ],
+      "category": "portable",
+      "icon": null
+    },
+    {
       "name": "CustomInstallExec",
       "exec": "C:\\windows\\system32\\CustomInstallExec.exe",
       "aliases": [
@@ -4595,6 +4782,39 @@
         "ddodiag"
       ],
       "category": "path",
+      "icon": null
+    },
+    {
+      "name": "deactivate",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\deactivate.bat",
+      "aliases": [
+        "deactivate",
+        "deactivate",
+        "deactivate"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "deactivate",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\python\\lib\\venv\\scripts\\nt\\deactivate.bat",
+      "aliases": [
+        "deactivate",
+        "deactivate",
+        "deactivate"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "deactivate",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\deactivate.bat",
+      "aliases": [
+        "deactivate",
+        "deactivate",
+        "deactivate"
+      ],
+      "category": "program_files",
       "icon": null
     },
     {
@@ -6308,6 +6528,26 @@
       "icon": null
     },
     {
+      "name": "edit",
+      "exec": "C:\\windows\\system32\\edit.exe",
+      "aliases": [
+        "edit",
+        "edit"
+      ],
+      "category": "path",
+      "icon": null
+    },
+    {
+      "name": "edit",
+      "exec": "C:\\WINDOWS\\system32\\edit.exe",
+      "aliases": [
+        "edit",
+        "edit"
+      ],
+      "category": "path",
+      "icon": null
+    },
+    {
       "name": "edit-git-bash",
       "exec": "C:\\Program Files\\Git\\mingw64\\share\\git\\edit-git-bash.exe",
       "aliases": [
@@ -6528,7 +6768,7 @@
     },
     {
       "name": "elevated_tracing_service",
-      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\140.0.7339.128\\elevated_tracing_service.exe",
+      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\143.0.7499.170\\elevated_tracing_service.exe",
       "aliases": [
         "elevated_tracing_service",
         "elevated_tracing_service",
@@ -6539,7 +6779,7 @@
     },
     {
       "name": "elevated_tracing_service",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.81\\elevated_tracing_service.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\elevated_tracing_service.exe",
       "aliases": [
         "elevated_tracing_service",
         "elevated_tracing_service",
@@ -6550,7 +6790,7 @@
     },
     {
       "name": "elevated_tracing_service",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.66\\elevated_tracing_service.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\elevated_tracing_service.exe",
       "aliases": [
         "elevated_tracing_service",
         "elevated_tracing_service",
@@ -6561,29 +6801,7 @@
     },
     {
       "name": "elevated_tracing_service",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.81\\elevated_tracing_service.exe",
-      "aliases": [
-        "elevated_tracing_service",
-        "elevated_tracing_service",
-        "elevated_tracing_service"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "elevated_tracing_service",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\elevated_tracing_service.exe",
-      "aliases": [
-        "elevated_tracing_service",
-        "elevated_tracing_service",
-        "elevated_tracing_service"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "elevated_tracing_service",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.81\\elevated_tracing_service.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\elevated_tracing_service.exe",
       "aliases": [
         "elevated_tracing_service",
         "elevated_tracing_service",
@@ -6594,7 +6812,7 @@
     },
     {
       "name": "elevation_service",
-      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\140.0.7339.128\\elevation_service.exe",
+      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\143.0.7499.170\\elevation_service.exe",
       "aliases": [
         "elevation_service",
         "elevation_service",
@@ -6605,7 +6823,7 @@
     },
     {
       "name": "elevation_service",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.81\\elevation_service.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\elevation_service.exe",
       "aliases": [
         "elevation_service",
         "elevation_service",
@@ -6616,7 +6834,7 @@
     },
     {
       "name": "elevation_service",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.66\\elevation_service.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\elevation_service.exe",
       "aliases": [
         "elevation_service",
         "elevation_service",
@@ -6627,29 +6845,7 @@
     },
     {
       "name": "elevation_service",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.81\\elevation_service.exe",
-      "aliases": [
-        "elevation_service",
-        "elevation_service",
-        "elevation_service"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "elevation_service",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\elevation_service.exe",
-      "aliases": [
-        "elevation_service",
-        "elevation_service",
-        "elevation_service"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "elevation_service",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.81\\elevation_service.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\elevation_service.exe",
       "aliases": [
         "elevation_service",
         "elevation_service",
@@ -7218,6 +7414,28 @@
     },
     {
       "name": "fetch_macholib",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\ctypes\\macholib\\fetch_macholib.bat",
+      "aliases": [
+        "fetch_macholib",
+        "fetch_macholib",
+        "fetch_macholib"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "fetch_macholib",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\ctypes\\macholib\\fetch_macholib.bat",
+      "aliases": [
+        "fetch_macholib",
+        "fetch_macholib",
+        "fetch_macholib"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "fetch_macholib",
       "exec": "C:\\Program Files\\Python312\\Lib\\ctypes\\macholib\\fetch_macholib.bat",
       "aliases": [
         "fetch_macholib",
@@ -7260,7 +7478,7 @@
     },
     {
       "name": "FileCoAuth",
-      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.164.0824.0003\\FileCoAuth.exe",
+      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.222.1112.0002\\FileCoAuth.exe",
       "aliases": [
         "filecoauth",
         "filecoauth",
@@ -7311,7 +7529,7 @@
     },
     {
       "name": "FileSyncConfig",
-      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.164.0824.0003\\FileSyncConfig.exe",
+      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.222.1112.0002\\FileSyncConfig.exe",
       "aliases": [
         "filesyncconfig",
         "filesyncconfig",
@@ -7322,7 +7540,7 @@
     },
     {
       "name": "FileSyncHelper",
-      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.164.0824.0003\\FileSyncHelper.exe",
+      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.222.1112.0002\\FileSyncHelper.exe",
       "aliases": [
         "filesynchelper",
         "filesynchelper",
@@ -9241,6 +9459,50 @@
       "icon": null
     },
     {
+      "name": "gui",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\gui.exe",
+      "aliases": [
+        "gui",
+        "gui",
+        "gui"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "gui-32",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\gui-32.exe",
+      "aliases": [
+        "gui-32",
+        "gui-32",
+        "gui-32"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "gui-64",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\gui-64.exe",
+      "aliases": [
+        "gui-64",
+        "gui-64",
+        "gui-64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "gui-arm64",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\gui-arm64.exe",
+      "aliases": [
+        "gui-arm64",
+        "gui-arm64",
+        "gui-arm64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
       "name": "guidgen",
       "exec": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\Tools\\guidgen.exe",
       "aliases": [
@@ -9488,6 +9750,18 @@
         "hp-documentation"
       ],
       "category": "start_menu",
+      "icon": null
+    },
+    {
+      "name": "HP One Agent",
+      "exec": "C:\\Program Files\\HP\\HP One Agent\\hp-one-agent-service.exe",
+      "aliases": [
+        "hp one agent",
+        "hponeagent",
+        "hp-one-agent",
+        "hp-one-agent-service"
+      ],
+      "category": "powershell",
       "icon": null
     },
     {
@@ -9857,6 +10131,17 @@
       "icon": null
     },
     {
+      "name": "HpseuHostLauncher",
+      "exec": "C:\\Program Files\\HP\\HP System Event Utility\\Host Launcher\\HpseuHostLauncher.exe",
+      "aliases": [
+        "hpseuhostlauncher",
+        "hpseuhostlauncher",
+        "hpseuhostlauncher"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
       "name": "HPSFReport",
       "exec": "C:\\Program Files (x86)\\HP\\HP Support Framework\\Resources\\HPSFReport.exe",
       "aliases": [
@@ -9996,6 +10281,17 @@
       "icon": null
     },
     {
+      "name": "ibd2sdi",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\ibd2sdi.exe",
+      "aliases": [
+        "ibd2sdi",
+        "ibd2sdi",
+        "ibd2sdi"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
       "name": "icacls",
       "exec": "C:\\windows\\system32\\icacls.exe",
       "aliases": [
@@ -10059,7 +10355,7 @@
     },
     {
       "name": "identity_helper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.81\\identity_helper.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\identity_helper.exe",
       "aliases": [
         "identity_helper",
         "identity_helper",
@@ -10070,7 +10366,7 @@
     },
     {
       "name": "identity_helper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.66\\identity_helper.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\identity_helper.exe",
       "aliases": [
         "identity_helper",
         "identity_helper",
@@ -10081,7 +10377,7 @@
     },
     {
       "name": "identity_helper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.81\\identity_helper.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\identity_helper.exe",
       "aliases": [
         "identity_helper",
         "identity_helper",
@@ -10091,23 +10387,34 @@
       "icon": null
     },
     {
-      "name": "identity_helper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\identity_helper.exe",
+      "name": "idle",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\idlelib\\idle.bat",
       "aliases": [
-        "identity_helper",
-        "identity_helper",
-        "identity_helper"
+        "idle",
+        "idle",
+        "idle"
       ],
       "category": "program_files",
       "icon": null
     },
     {
-      "name": "identity_helper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.81\\identity_helper.exe",
+      "name": "idle",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\python\\lib\\idlelib\\idle.bat",
       "aliases": [
-        "identity_helper",
-        "identity_helper",
-        "identity_helper"
+        "idle",
+        "idle",
+        "idle"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "idle",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\idlelib\\idle.bat",
+      "aliases": [
+        "idle",
+        "idle",
+        "idle"
       ],
       "category": "program_files",
       "icon": null
@@ -10176,7 +10483,7 @@
     },
     {
       "name": "ie_to_edge_stub",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.81\\BHO\\ie_to_edge_stub.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\BHO\\ie_to_edge_stub.exe",
       "aliases": [
         "ie_to_edge_stub",
         "ie_to_edge_stub",
@@ -10187,7 +10494,7 @@
     },
     {
       "name": "ie_to_edge_stub",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.66\\BHO\\ie_to_edge_stub.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\BHO\\ie_to_edge_stub.exe",
       "aliases": [
         "ie_to_edge_stub",
         "ie_to_edge_stub",
@@ -10198,29 +10505,7 @@
     },
     {
       "name": "ie_to_edge_stub",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.81\\BHO\\ie_to_edge_stub.exe",
-      "aliases": [
-        "ie_to_edge_stub",
-        "ie_to_edge_stub",
-        "ie_to_edge_stub"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "ie_to_edge_stub",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\BHO\\ie_to_edge_stub.exe",
-      "aliases": [
-        "ie_to_edge_stub",
-        "ie_to_edge_stub",
-        "ie_to_edge_stub"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "ie_to_edge_stub",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.81\\BHO\\ie_to_edge_stub.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\BHO\\ie_to_edge_stub.exe",
       "aliases": [
         "ie_to_edge_stub",
         "ie_to_edge_stub",
@@ -10539,6 +10824,84 @@
       "icon": null
     },
     {
+      "name": "Inno Setup Compiler",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\Compil32.exe",
+      "aliases": [
+        "inno setup compiler",
+        "innosetupcompiler",
+        "inno-setup-compiler"
+      ],
+      "category": "start_menu",
+      "icon": null
+    },
+    {
+      "name": "Inno Setup Documentation",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\ISetup.chm",
+      "aliases": [
+        "inno setup documentation",
+        "innosetupdocumentation",
+        "inno-setup-documentation"
+      ],
+      "category": "start_menu",
+      "icon": null
+    },
+    {
+      "name": "Inno Setup Documentation (Dark)",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\ISetup-dark.chm",
+      "aliases": [
+        "inno setup documentation (dark)",
+        "innosetupdocumentation(dark)",
+        "inno-setup-documentation-(dark)"
+      ],
+      "category": "start_menu",
+      "icon": null
+    },
+    {
+      "name": "Inno Setup Example Scripts",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\Examples",
+      "aliases": [
+        "inno setup example scripts",
+        "innosetupexamplescripts",
+        "inno-setup-example-scripts"
+      ],
+      "category": "start_menu",
+      "icon": null
+    },
+    {
+      "name": "Inno Setup FAQ",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\isfaq.url",
+      "aliases": [
+        "inno setup faq",
+        "innosetupfaq",
+        "inno-setup-faq"
+      ],
+      "category": "start_menu",
+      "icon": null
+    },
+    {
+      "name": "Inno Setup Revision History",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\whatsnew.htm",
+      "aliases": [
+        "inno setup revision history",
+        "innosetuprevisionhistory",
+        "inno-setup-revision-history"
+      ],
+      "category": "start_menu",
+      "icon": null
+    },
+    {
+      "name": "Inno Setup version 6.6.1",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\Compil32.exe",
+      "aliases": [
+        "inno setup version 6.6.1",
+        "innosetupversion6.6.1",
+        "inno-setup-version-6.6.1",
+        "compil32"
+      ],
+      "category": "installed",
+      "icon": "C:\\Program Files (x86)\\Inno Setup 6\\Compil32.exe"
+    },
+    {
       "name": "inno_updater",
       "exec": "C:\\Program Files\\cursor\\tools\\inno_updater.exe",
       "aliases": [
@@ -10558,6 +10921,28 @@
         "inno_updater"
       ],
       "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "innochecksum",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\innochecksum.exe",
+      "aliases": [
+        "innochecksum",
+        "innochecksum",
+        "innochecksum"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "innosetup-6.6.1",
+      "exec": "C:\\Users\\zaidm\\Downloads\\innosetup-6.6.1.exe",
+      "aliases": [
+        "innosetup-6.6.1",
+        "innosetup-6.6.1",
+        "innosetup-6.6.1"
+      ],
+      "category": "portable",
       "icon": null
     },
     {
@@ -10787,6 +11172,17 @@
       "icon": null
     },
     {
+      "name": "ISCC",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\ISCC.exe",
+      "aliases": [
+        "iscc",
+        "iscc",
+        "iscc"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
       "name": "iSCSI Initiator",
       "exec": "C:\\WINDOWS\\system32\\iscsicpl.exe",
       "aliases": [
@@ -10849,6 +11245,28 @@
       "icon": null
     },
     {
+      "name": "islzma32",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\islzma32.exe",
+      "aliases": [
+        "islzma32",
+        "islzma32",
+        "islzma32"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "islzma64",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\islzma64.exe",
+      "aliases": [
+        "islzma64",
+        "islzma64",
+        "islzma64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
       "name": "ISM",
       "exec": "C:\\windows\\system32\\ISM.exe",
       "aliases": [
@@ -10886,6 +11304,17 @@
         "isoburn"
       ],
       "category": "path",
+      "icon": null
+    },
+    {
+      "name": "ISSigTool",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\ISSigTool.exe",
+      "aliases": [
+        "issigtool",
+        "issigtool",
+        "issigtool"
+      ],
+      "category": "program_files",
       "icon": null
     },
     {
@@ -11018,6 +11447,18 @@
         "java"
       ],
       "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "Java(TM) SE Development Kit 21.0.4 (64-bit)",
+      "exec": "C:\\Program Files\\Java\\jdk-21\\bin\\jabswitch.exe",
+      "aliases": [
+        "java(tm) se development kit 21.0.4 (64-bit)",
+        "java(tm)sedevelopmentkit21.0.4(64-bit)",
+        "java(tm)-se-development-kit-21.0.4-(64-bit)",
+        "jabswitch"
+      ],
+      "category": "powershell",
       "icon": null
     },
     {
@@ -12410,6 +12851,17 @@
       "icon": null
     },
     {
+      "name": "lz4_decompress",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\lz4_decompress.exe",
+      "aliases": [
+        "lz4_decompress",
+        "lz4_decompress",
+        "lz4_decompress"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
       "name": "lzmadec",
       "exec": "C:\\Program Files\\Git\\mingw64\\bin\\lzmadec.exe",
       "aliases": [
@@ -13110,7 +13562,7 @@
     },
     {
       "name": "Microsoft Edge WebView2 Runtime",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\cookie_exporter.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\cookie_exporter.exe",
       "aliases": [
         "microsoft edge webview2 runtime",
         "microsoftedgewebview2runtime",
@@ -13118,7 +13570,7 @@
         "cookie_exporter"
       ],
       "category": "installed",
-      "icon": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.81\\msedgewebview2.exe,0"
+      "icon": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\msedgewebview2.exe,0"
     },
     {
       "name": "Microsoft Office Home and Student 2021 - en-us",
@@ -13165,6 +13617,26 @@
         "microsoft.codecoverage.console"
       ],
       "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "Microsoft.Data.UsageAndQualityInsights.MaintenanceTask",
+      "exec": "C:\\windows\\system32\\Microsoft.Data.UsageAndQualityInsights.MaintenanceTask.exe",
+      "aliases": [
+        "microsoft.data.usageandqualityinsights.maintenancetask",
+        "microsoft.data.usageandqualityinsights.maintenancetask"
+      ],
+      "category": "path",
+      "icon": null
+    },
+    {
+      "name": "Microsoft.Data.UsageAndQualityInsights.MaintenanceTask",
+      "exec": "C:\\WINDOWS\\system32\\Microsoft.Data.UsageAndQualityInsights.MaintenanceTask.exe",
+      "aliases": [
+        "microsoft.data.usageandqualityinsights.maintenancetask",
+        "microsoft.data.usageandqualityinsights.maintenancetask"
+      ],
+      "category": "path",
       "icon": null
     },
     {
@@ -13251,7 +13723,7 @@
     },
     {
       "name": "Microsoft.SharePoint.NativeMessagingClient",
-      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.164.0824.0003\\Microsoft.SharePoint.NativeMessagingClient.exe",
+      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.222.1112.0002\\Microsoft.SharePoint.NativeMessagingClient.exe",
       "aliases": [
         "microsoft.sharepoint.nativemessagingclient",
         "microsoft.sharepoint.nativemessagingclient",
@@ -13346,6 +13818,16 @@
       "icon": null
     },
     {
+      "name": "Microsoft.WindowsStore",
+      "exec": "C:\\Users\\zaidm\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.WindowsStore_8wekyb3d8bbwe\\microsoftstore.exe",
+      "aliases": [
+        "microsoft.windowsstore",
+        "microsoft.windowsstore"
+      ],
+      "category": "store",
+      "icon": null
+    },
+    {
       "name": "Microsoft.WindowsTerminal",
       "exec": "C:\\Users\\zaidm\\AppData\\Local\\Microsoft\\WindowsApps\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\wt.exe",
       "aliases": [
@@ -13397,45 +13879,23 @@
       "icon": null
     },
     {
-      "name": "MicrosoftEdge_X64_140.0.3485.81_140.0.3485.66",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\Download\\{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}\\140.0.3485.81\\MicrosoftEdge_X64_140.0.3485.81_140.0.3485.66.exe",
+      "name": "MicrosoftEdge_X64_143.0.3650.96_143.0.3650.80",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\Download\\{56EB18F8-B008-4CBD-B6D2-8C97FE7E9062}\\143.0.3650.96\\MicrosoftEdge_X64_143.0.3650.96_143.0.3650.80.exe",
       "aliases": [
-        "microsoftedge_x64_140.0.3485.81_140.0.3485.66",
-        "microsoftedge_x64_140.0.3485.81_140.0.3485.66",
-        "microsoftedge_x64_140.0.3485.81_140.0.3485.66"
+        "microsoftedge_x64_143.0.3650.96_143.0.3650.80",
+        "microsoftedge_x64_143.0.3650.96_143.0.3650.80",
+        "microsoftedge_x64_143.0.3650.96_143.0.3650.80"
       ],
       "category": "program_files",
       "icon": null
     },
     {
-      "name": "MicrosoftEdge_X64_140.0.3485.81_140.0.3485.66",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\Download\\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}\\140.0.3485.81\\MicrosoftEdge_X64_140.0.3485.81_140.0.3485.66.exe",
+      "name": "MicrosoftEdge_X64_143.0.3650.96_143.0.3650.80",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\Download\\{F3017226-FE2A-4295-8BDF-00C3A9A7E4C5}\\143.0.3650.96\\MicrosoftEdge_X64_143.0.3650.96_143.0.3650.80.exe",
       "aliases": [
-        "microsoftedge_x64_140.0.3485.81_140.0.3485.66",
-        "microsoftedge_x64_140.0.3485.81_140.0.3485.66",
-        "microsoftedge_x64_140.0.3485.81_140.0.3485.66"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "MicrosoftEdge_X64_140.0.3485.81_140.0.3485.66",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\Install\\{9FBD037E-6A8B-4F00-8030-E65FFA1B313D}\\MicrosoftEdge_X64_140.0.3485.81_140.0.3485.66.exe",
-      "aliases": [
-        "microsoftedge_x64_140.0.3485.81_140.0.3485.66",
-        "microsoftedge_x64_140.0.3485.81_140.0.3485.66",
-        "microsoftedge_x64_140.0.3485.81_140.0.3485.66"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "MicrosoftEdge_X64_140.0.3485.81_140.0.3485.66",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\Install\\{D758BE5B-8DB4-4116-BCAB-C5E787152E86}\\MicrosoftEdge_X64_140.0.3485.81_140.0.3485.66.exe",
-      "aliases": [
-        "microsoftedge_x64_140.0.3485.81_140.0.3485.66",
-        "microsoftedge_x64_140.0.3485.81_140.0.3485.66",
-        "microsoftedge_x64_140.0.3485.81_140.0.3485.66"
+        "microsoftedge_x64_143.0.3650.96_143.0.3650.80",
+        "microsoftedge_x64_143.0.3650.96_143.0.3650.80",
+        "microsoftedge_x64_143.0.3650.96_143.0.3650.80"
       ],
       "category": "program_files",
       "icon": null
@@ -13462,7 +13922,7 @@
     },
     {
       "name": "MicrosoftEdgeComRegisterShellARM64",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.199.11\\MicrosoftEdgeComRegisterShellARM64.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.215.9\\MicrosoftEdgeComRegisterShellARM64.exe",
       "aliases": [
         "microsoftedgecomregistershellarm64",
         "microsoftedgecomregistershellarm64",
@@ -13544,7 +14004,7 @@
     },
     {
       "name": "MicrosoftEdgeUpdate",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.199.11\\MicrosoftEdgeUpdate.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.215.9\\MicrosoftEdgeUpdate.exe",
       "aliases": [
         "microsoftedgeupdate",
         "microsoftedgeupdate",
@@ -13555,7 +14015,7 @@
     },
     {
       "name": "MicrosoftEdgeUpdateBroker",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.199.11\\MicrosoftEdgeUpdateBroker.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.215.9\\MicrosoftEdgeUpdateBroker.exe",
       "aliases": [
         "microsoftedgeupdatebroker",
         "microsoftedgeupdatebroker",
@@ -13566,7 +14026,7 @@
     },
     {
       "name": "MicrosoftEdgeUpdateComRegisterShell64",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.199.11\\MicrosoftEdgeUpdateComRegisterShell64.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.215.9\\MicrosoftEdgeUpdateComRegisterShell64.exe",
       "aliases": [
         "microsoftedgeupdatecomregistershell64",
         "microsoftedgeupdatecomregistershell64",
@@ -13577,7 +14037,7 @@
     },
     {
       "name": "MicrosoftEdgeUpdateCore",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.199.11\\MicrosoftEdgeUpdateCore.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.215.9\\MicrosoftEdgeUpdateCore.exe",
       "aliases": [
         "microsoftedgeupdatecore",
         "microsoftedgeupdatecore",
@@ -13588,7 +14048,7 @@
     },
     {
       "name": "MicrosoftEdgeUpdateOnDemand",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.199.11\\MicrosoftEdgeUpdateOnDemand.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.215.9\\MicrosoftEdgeUpdateOnDemand.exe",
       "aliases": [
         "microsoftedgeupdateondemand",
         "microsoftedgeupdateondemand",
@@ -13599,7 +14059,7 @@
     },
     {
       "name": "MicrosoftEdgeUpdateSetup",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.199.11\\MicrosoftEdgeUpdateSetup.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\1.3.215.9\\MicrosoftEdgeUpdateSetup.exe",
       "aliases": [
         "microsoftedgeupdatesetup",
         "microsoftedgeupdatesetup",
@@ -13609,12 +14069,12 @@
       "icon": null
     },
     {
-      "name": "MicrosoftEdgeUpdateSetup_X86_1.3.199.11",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\Download\\{F3C4FE00-EFD5-403B-9569-398A20F1BA4A}\\1.3.199.11\\MicrosoftEdgeUpdateSetup_X86_1.3.199.11.exe",
+      "name": "MicrosoftEdgeUpdateSetup_X86_1.3.215.9",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeUpdate\\Download\\{F3C4FE00-EFD5-403B-9569-398A20F1BA4A}\\1.3.215.9\\MicrosoftEdgeUpdateSetup_X86_1.3.215.9.exe",
       "aliases": [
-        "microsoftedgeupdatesetup_x86_1.3.199.11",
-        "microsoftedgeupdatesetup_x86_1.3.199.11",
-        "microsoftedgeupdatesetup_x86_1.3.199.11"
+        "microsoftedgeupdatesetup_x86_1.3.215.9",
+        "microsoftedgeupdatesetup_x86_1.3.215.9",
+        "microsoftedgeupdatesetup_x86_1.3.215.9"
       ],
       "category": "program_files",
       "icon": null
@@ -13628,6 +14088,16 @@
         "microsoftedgewebview2setup"
       ],
       "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "microsoftstore",
+      "exec": "C:\\Users\\zaidm\\AppData\\Local\\Microsoft\\WindowsApps\\microsoftstore.exe",
+      "aliases": [
+        "microsoftstore",
+        "microsoftstore"
+      ],
+      "category": "path",
       "icon": null
     },
     {
@@ -13646,6 +14116,26 @@
       "aliases": [
         "microsoftwindows.desktopstickereditorcentennial",
         "microsoftwindows.desktopstickereditorcentennial"
+      ],
+      "category": "path",
+      "icon": null
+    },
+    {
+      "name": "MidiSrv",
+      "exec": "C:\\windows\\system32\\MidiSrv.exe",
+      "aliases": [
+        "midisrv",
+        "midisrv"
+      ],
+      "category": "path",
+      "icon": null
+    },
+    {
+      "name": "MidiSrv",
+      "exec": "C:\\WINDOWS\\system32\\MidiSrv.exe",
+      "aliases": [
+        "midisrv",
+        "midisrv"
       ],
       "category": "path",
       "icon": null
@@ -13868,6 +14358,17 @@
         "mintty",
         "mintty",
         "mintty"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "MipDlp",
+      "exec": "C:\\Program Files\\Windows Defender\\MipDlp.exe",
+      "aliases": [
+        "mipdlp",
+        "mipdlp",
+        "mipdlp"
       ],
       "category": "program_files",
       "icon": null
@@ -14556,6 +15057,39 @@
       "icon": null
     },
     {
+      "name": "mscopilot",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\mscopilot.exe",
+      "aliases": [
+        "mscopilot",
+        "mscopilot",
+        "mscopilot"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mscopilot",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\mscopilot.exe",
+      "aliases": [
+        "mscopilot",
+        "mscopilot",
+        "mscopilot"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mscopilot",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\mscopilot.exe",
+      "aliases": [
+        "mscopilot",
+        "mscopilot",
+        "mscopilot"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
       "name": "msdt",
       "exec": "C:\\windows\\system32\\msdt.exe",
       "aliases": [
@@ -14608,7 +15142,7 @@
     },
     {
       "name": "msedge",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.81\\msedge.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\msedge.exe",
       "aliases": [
         "msedge",
         "msedge",
@@ -14619,7 +15153,7 @@
     },
     {
       "name": "msedge",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.66\\msedge.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\msedge.exe",
       "aliases": [
         "msedge",
         "msedge",
@@ -14630,29 +15164,7 @@
     },
     {
       "name": "msedge",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.81\\msedge.exe",
-      "aliases": [
-        "msedge",
-        "msedge",
-        "msedge"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "msedge",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedge.exe",
-      "aliases": [
-        "msedge",
-        "msedge",
-        "msedge"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "msedge",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.81\\msedge.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\msedge.exe",
       "aliases": [
         "msedge",
         "msedge",
@@ -14674,7 +15186,7 @@
     },
     {
       "name": "msedge_proxy",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.81\\msedge_proxy.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\msedge_proxy.exe",
       "aliases": [
         "msedge_proxy",
         "msedge_proxy",
@@ -14685,7 +15197,7 @@
     },
     {
       "name": "msedge_proxy",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.66\\msedge_proxy.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\msedge_proxy.exe",
       "aliases": [
         "msedge_proxy",
         "msedge_proxy",
@@ -14696,29 +15208,7 @@
     },
     {
       "name": "msedge_proxy",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.81\\msedge_proxy.exe",
-      "aliases": [
-        "msedge_proxy",
-        "msedge_proxy",
-        "msedge_proxy"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "msedge_proxy",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedge_proxy.exe",
-      "aliases": [
-        "msedge_proxy",
-        "msedge_proxy",
-        "msedge_proxy"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "msedge_proxy",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.81\\msedge_proxy.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\msedge_proxy.exe",
       "aliases": [
         "msedge_proxy",
         "msedge_proxy",
@@ -14729,7 +15219,7 @@
     },
     {
       "name": "msedge_pwa_launcher",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.81\\msedge_pwa_launcher.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\msedge_pwa_launcher.exe",
       "aliases": [
         "msedge_pwa_launcher",
         "msedge_pwa_launcher",
@@ -14740,7 +15230,7 @@
     },
     {
       "name": "msedge_pwa_launcher",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.66\\msedge_pwa_launcher.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\msedge_pwa_launcher.exe",
       "aliases": [
         "msedge_pwa_launcher",
         "msedge_pwa_launcher",
@@ -14751,29 +15241,7 @@
     },
     {
       "name": "msedge_pwa_launcher",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.81\\msedge_pwa_launcher.exe",
-      "aliases": [
-        "msedge_pwa_launcher",
-        "msedge_pwa_launcher",
-        "msedge_pwa_launcher"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "msedge_pwa_launcher",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedge_pwa_launcher.exe",
-      "aliases": [
-        "msedge_pwa_launcher",
-        "msedge_pwa_launcher",
-        "msedge_pwa_launcher"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "msedge_pwa_launcher",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.81\\msedge_pwa_launcher.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\msedge_pwa_launcher.exe",
       "aliases": [
         "msedge_pwa_launcher",
         "msedge_pwa_launcher",
@@ -14784,7 +15252,7 @@
     },
     {
       "name": "msedgewebview2",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.81\\msedgewebview2.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\msedgewebview2.exe",
       "aliases": [
         "msedgewebview2",
         "msedgewebview2",
@@ -14795,7 +15263,7 @@
     },
     {
       "name": "msedgewebview2",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.66\\msedgewebview2.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\msedgewebview2.exe",
       "aliases": [
         "msedgewebview2",
         "msedgewebview2",
@@ -14806,29 +15274,7 @@
     },
     {
       "name": "msedgewebview2",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.81\\msedgewebview2.exe",
-      "aliases": [
-        "msedgewebview2",
-        "msedgewebview2",
-        "msedgewebview2"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "msedgewebview2",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\msedgewebview2.exe",
-      "aliases": [
-        "msedgewebview2",
-        "msedgewebview2",
-        "msedgewebview2"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "msedgewebview2",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.81\\msedgewebview2.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\msedgewebview2.exe",
       "aliases": [
         "msedgewebview2",
         "msedgewebview2",
@@ -15563,13 +16009,667 @@
       "icon": null
     },
     {
-      "name": "myHP",
-      "exec": "C:\\Users\\zaidm\\AppData\\Local\\Microsoft\\WindowsApps\\myHP.exe",
+      "name": "my_print_defaults",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\my_print_defaults.exe",
       "aliases": [
-        "myhp",
-        "myhp"
+        "my_print_defaults",
+        "my_print_defaults",
+        "my_print_defaults"
       ],
-      "category": "path",
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "myisam_ftdump",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\myisam_ftdump.exe",
+      "aliases": [
+        "myisam_ftdump",
+        "myisam_ftdump",
+        "myisam_ftdump"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "myisamchk",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\myisamchk.exe",
+      "aliases": [
+        "myisamchk",
+        "myisamchk",
+        "myisamchk"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "myisamlog",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\myisamlog.exe",
+      "aliases": [
+        "myisamlog",
+        "myisamlog",
+        "myisamlog"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "myisampack",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\myisampack.exe",
+      "aliases": [
+        "myisampack",
+        "myisampack",
+        "myisampack"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "MyProg",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\Examples\\MyProg.exe",
+      "aliases": [
+        "myprog",
+        "myprog",
+        "myprog"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "MyProg-Arm64",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\Examples\\MyProg-Arm64.exe",
+      "aliases": [
+        "myprog-arm64",
+        "myprog-arm64",
+        "myprog-arm64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "MyProg-x64",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\Examples\\MyProg-x64.exe",
+      "aliases": [
+        "myprog-x64",
+        "myprog-x64",
+        "myprog-x64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysql",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysql.exe",
+      "aliases": [
+        "mysql",
+        "mysql",
+        "mysql"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysql",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\mysql.exe",
+      "aliases": [
+        "mysql",
+        "mysql",
+        "mysql"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "MySQL 8.0 Command Line Client",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysql.exe",
+      "aliases": [
+        "mysql 8.0 command line client",
+        "mysql8.0commandlineclient",
+        "mysql-8.0-command-line-client"
+      ],
+      "category": "start_menu",
+      "icon": null
+    },
+    {
+      "name": "MySQL 8.0 Command Line Client - Unicode",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysql.exe",
+      "aliases": [
+        "mysql 8.0 command line client - unicode",
+        "mysql8.0commandlineclient-unicode",
+        "mysql-8.0-command-line-client---unicode"
+      ],
+      "category": "start_menu",
+      "icon": null
+    },
+    {
+      "name": "MySQL Installer - Community",
+      "exec": "C:\\Program Files (x86)\\MySQL\\MySQL Installer for Windows\\MySQLInstaller.exe",
+      "aliases": [
+        "mysql installer - community",
+        "mysqlinstaller-community",
+        "mysql-installer---community"
+      ],
+      "category": "start_menu",
+      "icon": null
+    },
+    {
+      "name": "MySQL Router 8.0",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Router 8.0\\bin\\mysqlrouter.exe",
+      "aliases": [
+        "mysql router 8.0",
+        "mysqlrouter8.0",
+        "mysql-router-8.0",
+        "mysqlrouter"
+      ],
+      "category": "powershell",
+      "icon": null
+    },
+    {
+      "name": "MySQL Server 8.0",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\ibd2sdi.exe",
+      "aliases": [
+        "mysql server 8.0",
+        "mysqlserver8.0",
+        "mysql-server-8.0",
+        "ibd2sdi"
+      ],
+      "category": "powershell",
+      "icon": null
+    },
+    {
+      "name": "MySQL Shell",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\mysqlsh.exe",
+      "aliases": [
+        "mysql shell",
+        "mysqlshell",
+        "mysql-shell"
+      ],
+      "category": "start_menu",
+      "icon": null
+    },
+    {
+      "name": "MySQL Shell",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\mysql-secret-store-windows-credential.exe",
+      "aliases": [
+        "mysql shell",
+        "mysqlshell",
+        "mysql-shell",
+        "mysql-secret-store-windows-credential"
+      ],
+      "category": "powershell",
+      "icon": null
+    },
+    {
+      "name": "MySQL Workbench 8.0 CE",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\MySQLWorkbench.exe",
+      "aliases": [
+        "mysql workbench 8.0 ce",
+        "mysqlworkbench8.0ce",
+        "mysql-workbench-8.0-ce"
+      ],
+      "category": "start_menu",
+      "icon": null
+    },
+    {
+      "name": "MySQL Workbench 8.0 CE",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\ccapiserver.exe",
+      "aliases": [
+        "mysql workbench 8.0 ce",
+        "mysqlworkbench8.0ce",
+        "mysql-workbench-8.0-ce",
+        "ccapiserver"
+      ],
+      "category": "powershell",
+      "icon": null
+    },
+    {
+      "name": "mysql-secret-store-windows-credential",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\mysql-secret-store-windows-credential.exe",
+      "aliases": [
+        "mysql-secret-store-windows-credential",
+        "mysql-secret-store-windows-credential",
+        "mysql-secret-store-windows-credential"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysql-secret-store-windows-credential",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\bin\\mysql-secret-store-windows-credential.exe",
+      "aliases": [
+        "mysql-secret-store-windows-credential",
+        "mysql-secret-store-windows-credential",
+        "mysql-secret-store-windows-credential"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysql_config_editor",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysql_config_editor.exe",
+      "aliases": [
+        "mysql_config_editor",
+        "mysql_config_editor",
+        "mysql_config_editor"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysql_migrate_keyring",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysql_migrate_keyring.exe",
+      "aliases": [
+        "mysql_migrate_keyring",
+        "mysql_migrate_keyring",
+        "mysql_migrate_keyring"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysql_secure_installation",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysql_secure_installation.exe",
+      "aliases": [
+        "mysql_secure_installation",
+        "mysql_secure_installation",
+        "mysql_secure_installation"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysql_ssl_rsa_setup",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysql_ssl_rsa_setup.exe",
+      "aliases": [
+        "mysql_ssl_rsa_setup",
+        "mysql_ssl_rsa_setup",
+        "mysql_ssl_rsa_setup"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysql_tzinfo_to_sql",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysql_tzinfo_to_sql.exe",
+      "aliases": [
+        "mysql_tzinfo_to_sql",
+        "mysql_tzinfo_to_sql",
+        "mysql_tzinfo_to_sql"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysql_upgrade",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysql_upgrade.exe",
+      "aliases": [
+        "mysql_upgrade",
+        "mysql_upgrade",
+        "mysql_upgrade"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqladmin",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysqladmin.exe",
+      "aliases": [
+        "mysqladmin",
+        "mysqladmin",
+        "mysqladmin"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlbinlog",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysqlbinlog.exe",
+      "aliases": [
+        "mysqlbinlog",
+        "mysqlbinlog",
+        "mysqlbinlog"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlbinlog",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\libexec\\mysqlsh\\mysqlbinlog.exe",
+      "aliases": [
+        "mysqlbinlog",
+        "mysqlbinlog",
+        "mysqlbinlog"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlcheck",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysqlcheck.exe",
+      "aliases": [
+        "mysqlcheck",
+        "mysqlcheck",
+        "mysqlcheck"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqld",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysqld.exe",
+      "aliases": [
+        "mysqld",
+        "mysqld",
+        "mysqld"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqldump",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysqldump.exe",
+      "aliases": [
+        "mysqldump",
+        "mysqldump",
+        "mysqldump"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqldump",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\mysqldump.exe",
+      "aliases": [
+        "mysqldump",
+        "mysqldump",
+        "mysqldump"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlimport",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysqlimport.exe",
+      "aliases": [
+        "mysqlimport",
+        "mysqlimport",
+        "mysqlimport"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "MySQLInstaller",
+      "exec": "C:\\Program Files (x86)\\MySQL\\MySQL Installer for Windows\\MySQLInstaller.exe",
+      "aliases": [
+        "mysqlinstaller",
+        "mysqlinstaller",
+        "mysqlinstaller"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "MySQLInstallerConsole",
+      "exec": "C:\\Program Files (x86)\\MySQL\\MySQL Installer for Windows\\MySQLInstallerConsole.exe",
+      "aliases": [
+        "mysqlinstallerconsole",
+        "mysqlinstallerconsole",
+        "mysqlinstallerconsole"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "MySQLInstallerLauncher",
+      "exec": "C:\\Program Files (x86)\\MySQL\\MySQL Installer for Windows\\MySQLInstallerLauncher.exe",
+      "aliases": [
+        "mysqlinstallerlauncher",
+        "mysqlinstallerlauncher",
+        "mysqlinstallerlauncher"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "MySQLInstallerUpdater",
+      "exec": "C:\\Program Files (x86)\\MySQL\\MySQL Installer for Windows\\MySQLInstallerUpdater.exe",
+      "aliases": [
+        "mysqlinstallerupdater",
+        "mysqlinstallerupdater",
+        "mysqlinstallerupdater"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlpump",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysqlpump.exe",
+      "aliases": [
+        "mysqlpump",
+        "mysqlpump",
+        "mysqlpump"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlrouter",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Router 8.0\\bin\\mysqlrouter.exe",
+      "aliases": [
+        "mysqlrouter",
+        "mysqlrouter",
+        "mysqlrouter"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlrouter",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysqlrouter.exe",
+      "aliases": [
+        "mysqlrouter",
+        "mysqlrouter",
+        "mysqlrouter"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlrouter",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\router\\bin\\mysqlrouter.exe",
+      "aliases": [
+        "mysqlrouter",
+        "mysqlrouter",
+        "mysqlrouter"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlrouter_bootstrap",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\router\\bin\\mysqlrouter_bootstrap.exe",
+      "aliases": [
+        "mysqlrouter_bootstrap",
+        "mysqlrouter_bootstrap",
+        "mysqlrouter_bootstrap"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlrouter_keyring",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Router 8.0\\bin\\mysqlrouter_keyring.exe",
+      "aliases": [
+        "mysqlrouter_keyring",
+        "mysqlrouter_keyring",
+        "mysqlrouter_keyring"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlrouter_keyring",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysqlrouter_keyring.exe",
+      "aliases": [
+        "mysqlrouter_keyring",
+        "mysqlrouter_keyring",
+        "mysqlrouter_keyring"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlrouter_keyring",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\router\\bin\\mysqlrouter_keyring.exe",
+      "aliases": [
+        "mysqlrouter_keyring",
+        "mysqlrouter_keyring",
+        "mysqlrouter_keyring"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlrouter_mrs_client",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\router\\bin\\mysqlrouter_mrs_client.exe",
+      "aliases": [
+        "mysqlrouter_mrs_client",
+        "mysqlrouter_mrs_client",
+        "mysqlrouter_mrs_client"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlrouter_passwd",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Router 8.0\\bin\\mysqlrouter_passwd.exe",
+      "aliases": [
+        "mysqlrouter_passwd",
+        "mysqlrouter_passwd",
+        "mysqlrouter_passwd"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlrouter_passwd",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysqlrouter_passwd.exe",
+      "aliases": [
+        "mysqlrouter_passwd",
+        "mysqlrouter_passwd",
+        "mysqlrouter_passwd"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlrouter_passwd",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\router\\bin\\mysqlrouter_passwd.exe",
+      "aliases": [
+        "mysqlrouter_passwd",
+        "mysqlrouter_passwd",
+        "mysqlrouter_passwd"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlrouter_plugin_info",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Router 8.0\\bin\\mysqlrouter_plugin_info.exe",
+      "aliases": [
+        "mysqlrouter_plugin_info",
+        "mysqlrouter_plugin_info",
+        "mysqlrouter_plugin_info"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlrouter_plugin_info",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysqlrouter_plugin_info.exe",
+      "aliases": [
+        "mysqlrouter_plugin_info",
+        "mysqlrouter_plugin_info",
+        "mysqlrouter_plugin_info"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlrouter_plugin_info",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\router\\bin\\mysqlrouter_plugin_info.exe",
+      "aliases": [
+        "mysqlrouter_plugin_info",
+        "mysqlrouter_plugin_info",
+        "mysqlrouter_plugin_info"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlsh",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\bin\\mysqlsh.exe",
+      "aliases": [
+        "mysqlsh",
+        "mysqlsh",
+        "mysqlsh"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlsh",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\bin\\mysqlsh.exe",
+      "aliases": [
+        "mysqlsh",
+        "mysqlsh",
+        "mysqlsh"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "MySQLShellWorkbench",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\MySQLShellWorkbench.exe",
+      "aliases": [
+        "mysqlshellworkbench",
+        "mysqlshellworkbench",
+        "mysqlshellworkbench"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlshow",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysqlshow.exe",
+      "aliases": [
+        "mysqlshow",
+        "mysqlshow",
+        "mysqlshow"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "mysqlslap",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\mysqlslap.exe",
+      "aliases": [
+        "mysqlslap",
+        "mysqlslap",
+        "mysqlslap"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "MySQLWorkbench",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\MySQLWorkbench.exe",
+      "aliases": [
+        "mysqlworkbench",
+        "mysqlworkbench",
+        "mysqlworkbench"
+      ],
+      "category": "program_files",
       "icon": null
     },
     {
@@ -16255,6 +17355,17 @@
       "icon": null
     },
     {
+      "name": "node",
+      "exec": "C:\\Program Files\\cursor\\resources\\app\\resources\\helpers\\node.exe",
+      "aliases": [
+        "node",
+        "node",
+        "node"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
       "name": "nohup",
       "exec": "C:\\Program Files\\Git\\usr\\bin\\nohup.exe",
       "aliases": [
@@ -16338,7 +17449,7 @@
     },
     {
       "name": "notification_click_helper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.81\\notification_click_helper.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\notification_click_helper.exe",
       "aliases": [
         "notification_click_helper",
         "notification_click_helper",
@@ -16349,7 +17460,7 @@
     },
     {
       "name": "notification_helper",
-      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\140.0.7339.128\\notification_helper.exe",
+      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\143.0.7499.170\\notification_helper.exe",
       "aliases": [
         "notification_helper",
         "notification_helper",
@@ -16360,7 +17471,7 @@
     },
     {
       "name": "notification_helper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.81\\notification_helper.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\notification_helper.exe",
       "aliases": [
         "notification_helper",
         "notification_helper",
@@ -16371,7 +17482,7 @@
     },
     {
       "name": "notification_helper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.66\\notification_helper.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\notification_helper.exe",
       "aliases": [
         "notification_helper",
         "notification_helper",
@@ -16382,29 +17493,7 @@
     },
     {
       "name": "notification_helper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.81\\notification_helper.exe",
-      "aliases": [
-        "notification_helper",
-        "notification_helper",
-        "notification_helper"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "notification_helper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\notification_helper.exe",
-      "aliases": [
-        "notification_helper",
-        "notification_helper",
-        "notification_helper"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "notification_helper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.81\\notification_helper.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\notification_helper.exe",
       "aliases": [
         "notification_helper",
         "notification_helper",
@@ -16729,17 +17818,6 @@
     },
     {
       "name": "OfficeClickToRun",
-      "exec": "C:\\Program Files\\Common Files\\microsoft shared\\ClickToRun\\backup\\9AE6A5AF-6900-48A0-8764-87419AA2DB92\\OfficeClickToRun.exe",
-      "aliases": [
-        "officeclicktorun",
-        "officeclicktorun",
-        "officeclicktorun"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "OfficeClickToRun",
       "exec": "C:\\Program Files\\Microsoft Office 15\\ClientX64\\OfficeClickToRun.exe",
       "aliases": [
         "officeclicktorun",
@@ -16794,12 +17872,23 @@
       "icon": null
     },
     {
-      "name": "old_chrome",
-      "exec": "C:\\Program Files\\Google\\Chrome\\Temp\\scoped_dir13948_84939052\\old_chrome.exe",
+      "name": "ogr2ogr",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\ogr2ogr.exe",
       "aliases": [
-        "old_chrome",
-        "old_chrome",
-        "old_chrome"
+        "ogr2ogr",
+        "ogr2ogr",
+        "ogr2ogr"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "ogrinfo",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\ogrinfo.exe",
+      "aliases": [
+        "ogrinfo",
+        "ogrinfo",
+        "ogrinfo"
       ],
       "category": "program_files",
       "icon": null
@@ -16854,6 +17943,16 @@
       "aliases": [
         "olk",
         "olk"
+      ],
+      "category": "path",
+      "icon": null
+    },
+    {
+      "name": "olkMcpServer",
+      "exec": "C:\\Users\\zaidm\\AppData\\Local\\Microsoft\\WindowsApps\\olkMcpServer.exe",
+      "aliases": [
+        "olkmcpserver",
+        "olkmcpserver"
       ],
       "category": "path",
       "icon": null
@@ -16933,7 +18032,7 @@
     },
     {
       "name": "OneDrive.Sync.Service",
-      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.164.0824.0003\\OneDrive.Sync.Service.exe",
+      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.222.1112.0002\\OneDrive.Sync.Service.exe",
       "aliases": [
         "onedrive.sync.service",
         "onedrive.sync.service",
@@ -16944,7 +18043,7 @@
     },
     {
       "name": "OneDriveActionHelper",
-      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.164.0824.0003\\OneDriveActionHelper.exe",
+      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.222.1112.0002\\OneDriveActionHelper.exe",
       "aliases": [
         "onedriveactionhelper",
         "onedriveactionhelper",
@@ -16955,7 +18054,7 @@
     },
     {
       "name": "OneDriveFileLauncher",
-      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.164.0824.0003\\OneDriveFileLauncher.exe",
+      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.222.1112.0002\\OneDriveFileLauncher.exe",
       "aliases": [
         "onedrivefilelauncher",
         "onedrivefilelauncher",
@@ -16966,7 +18065,7 @@
     },
     {
       "name": "OneDriveLauncher",
-      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.164.0824.0003\\OneDriveLauncher.exe",
+      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.222.1112.0002\\OneDriveLauncher.exe",
       "aliases": [
         "onedrivelauncher",
         "onedrivelauncher",
@@ -16977,7 +18076,7 @@
     },
     {
       "name": "OneDrivePatcher",
-      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.164.0824.0003\\OneDrivePatcher.exe",
+      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.222.1112.0002\\OneDrivePatcher.exe",
       "aliases": [
         "onedrivepatcher",
         "onedrivepatcher",
@@ -16988,18 +18087,7 @@
     },
     {
       "name": "OneDriveSetup",
-      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.164.0824.0003\\OneDriveSetup.exe",
-      "aliases": [
-        "onedrivesetup",
-        "onedrivesetup",
-        "onedrivesetup"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "OneDriveSetup",
-      "exec": "C:\\Program Files\\Microsoft OneDrive\\StandaloneUpdater\\OneDriveSetup.exe",
+      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.222.1112.0002\\OneDriveSetup.exe",
       "aliases": [
         "onedrivesetup",
         "onedrivesetup",
@@ -17041,7 +18129,7 @@
     },
     {
       "name": "OneDriveUpdaterService",
-      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.164.0824.0003\\OneDriveUpdaterService.exe",
+      "exec": "C:\\Program Files\\Microsoft OneDrive\\25.222.1112.0002\\OneDriveUpdaterService.exe",
       "aliases": [
         "onedriveupdaterservice",
         "onedriveupdaterservice",
@@ -17262,7 +18350,7 @@
     },
     {
       "name": "os_update_handler",
-      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\140.0.7339.128\\os_update_handler.exe",
+      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\143.0.7499.170\\os_update_handler.exe",
       "aliases": [
         "os_update_handler",
         "os_update_handler",
@@ -17539,6 +18627,17 @@
       "icon": null
     },
     {
+      "name": "passkey_authenticator_plugin",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\passkey_authenticator_plugin.exe",
+      "aliases": [
+        "passkey_authenticator_plugin",
+        "passkey_authenticator_plugin",
+        "passkey_authenticator_plugin"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
       "name": "passwd",
       "exec": "C:\\Program Files\\Git\\usr\\bin\\passwd.exe",
       "aliases": [
@@ -17796,6 +18895,17 @@
         "perl5.38.2",
         "perl5.38.2",
         "perl5.38.2"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "perror",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\perror.exe",
+      "aliases": [
+        "perror",
+        "perror",
+        "perror"
       ],
       "category": "program_files",
       "icon": null
@@ -18224,6 +19334,17 @@
         "plasrv"
       ],
       "category": "path",
+      "icon": null
+    },
+    {
+      "name": "platform_experience_helper",
+      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\PlatformExperienceHelper\\platform_experience_helper.exe",
+      "aliases": [
+        "platform_experience_helper",
+        "platform_experience_helper",
+        "platform_experience_helper"
+      ],
+      "category": "program_files",
       "icon": null
     },
     {
@@ -18862,7 +19983,7 @@
     },
     {
       "name": "pwahelper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.81\\pwahelper.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\pwahelper.exe",
       "aliases": [
         "pwahelper",
         "pwahelper",
@@ -18873,7 +19994,7 @@
     },
     {
       "name": "pwahelper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.66\\pwahelper.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\pwahelper.exe",
       "aliases": [
         "pwahelper",
         "pwahelper",
@@ -18884,29 +20005,7 @@
     },
     {
       "name": "pwahelper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.81\\pwahelper.exe",
-      "aliases": [
-        "pwahelper",
-        "pwahelper",
-        "pwahelper"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "pwahelper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\pwahelper.exe",
-      "aliases": [
-        "pwahelper",
-        "pwahelper",
-        "pwahelper"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "pwahelper",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.81\\pwahelper.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\pwahelper.exe",
       "aliases": [
         "pwahelper",
         "pwahelper",
@@ -18959,6 +20058,28 @@
     },
     {
       "name": "py",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\py.exe",
+      "aliases": [
+        "py",
+        "py",
+        "py"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "py",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\py.exe",
+      "aliases": [
+        "py",
+        "py",
+        "py"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "py",
       "exec": "C:\\windows\\py.exe",
       "aliases": [
         "py",
@@ -18999,6 +20120,50 @@
       ],
       "category": "installed",
       "icon": "C:\\Users\\zaidm\\AppData\\Local\\JetBrains\\PyCharm Community Edition 2023.2.5\\bin\\pycharm64.exe"
+    },
+    {
+      "name": "python",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\python.exe",
+      "aliases": [
+        "python",
+        "python",
+        "python"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "python",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\python.exe",
+      "aliases": [
+        "python",
+        "python",
+        "python"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "python",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\python.exe",
+      "aliases": [
+        "python",
+        "python",
+        "python"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "python",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\python.exe",
+      "aliases": [
+        "python",
+        "python",
+        "python"
+      ],
+      "category": "program_files",
+      "icon": null
     },
     {
       "name": "python",
@@ -19088,6 +20253,28 @@
     },
     {
       "name": "pythonw",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\pythonw.exe",
+      "aliases": [
+        "pythonw",
+        "pythonw",
+        "pythonw"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "pythonw",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\pythonw.exe",
+      "aliases": [
+        "pythonw",
+        "pythonw",
+        "pythonw"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "pythonw",
       "exec": "C:\\Program Files\\Python312\\pythonw.exe",
       "aliases": [
         "pythonw",
@@ -19104,6 +20291,28 @@
         "pythonw",
         "pythonw",
         "pythonw"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "pyw",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\pyw.exe",
+      "aliases": [
+        "pyw",
+        "pyw",
+        "pyw"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "pyw",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\pyw.exe",
+      "aliases": [
+        "pyw",
+        "pyw",
+        "pyw"
       ],
       "category": "program_files",
       "icon": null
@@ -21588,7 +22797,7 @@
     },
     {
       "name": "setup",
-      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\140.0.7339.128\\Installer\\setup.exe",
+      "exec": "C:\\Program Files\\Google\\Chrome\\Application\\143.0.7499.170\\Installer\\setup.exe",
       "aliases": [
         "setup",
         "setup",
@@ -21610,7 +22819,7 @@
     },
     {
       "name": "setup",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.81\\Installer\\setup.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\Installer\\setup.exe",
       "aliases": [
         "setup",
         "setup",
@@ -21621,7 +22830,7 @@
     },
     {
       "name": "setup",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.66\\Installer\\setup.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\Installer\\setup.exe",
       "aliases": [
         "setup",
         "setup",
@@ -21632,29 +22841,7 @@
     },
     {
       "name": "setup",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.81\\Installer\\setup.exe",
-      "aliases": [
-        "setup",
-        "setup",
-        "setup"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "setup",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\Installer\\setup.exe",
-      "aliases": [
-        "setup",
-        "setup",
-        "setup"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "setup",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.81\\Installer\\setup.exe",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\Installer\\setup.exe",
       "aliases": [
         "setup",
         "setup",
@@ -21981,7 +23168,7 @@
     },
     {
       "name": "show_third_party_software_licenses",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\140.0.3485.81\\show_third_party_software_licenses.bat",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\143.0.3650.96\\show_third_party_software_licenses.bat",
       "aliases": [
         "show_third_party_software_licenses",
         "show_third_party_software_licenses",
@@ -21992,7 +23179,7 @@
     },
     {
       "name": "show_third_party_software_licenses",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.66\\show_third_party_software_licenses.bat",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\143.0.3650.96\\show_third_party_software_licenses.bat",
       "aliases": [
         "show_third_party_software_licenses",
         "show_third_party_software_licenses",
@@ -22003,29 +23190,7 @@
     },
     {
       "name": "show_third_party_software_licenses",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeCore\\140.0.3485.81\\show_third_party_software_licenses.bat",
-      "aliases": [
-        "show_third_party_software_licenses",
-        "show_third_party_software_licenses",
-        "show_third_party_software_licenses"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "show_third_party_software_licenses",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.66\\show_third_party_software_licenses.bat",
-      "aliases": [
-        "show_third_party_software_licenses",
-        "show_third_party_software_licenses",
-        "show_third_party_software_licenses"
-      ],
-      "category": "program_files",
-      "icon": null
-    },
-    {
-      "name": "show_third_party_software_licenses",
-      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\140.0.3485.81\\show_third_party_software_licenses.bat",
+      "exec": "C:\\Program Files (x86)\\Microsoft\\EdgeWebView\\Application\\143.0.3650.96\\show_third_party_software_licenses.bat",
       "aliases": [
         "show_third_party_software_licenses",
         "show_third_party_software_licenses",
@@ -23108,6 +24273,16 @@
       "icon": null
     },
     {
+      "name": "store",
+      "exec": "C:\\Users\\zaidm\\AppData\\Local\\Microsoft\\WindowsApps\\store.exe",
+      "aliases": [
+        "store",
+        "store"
+      ],
+      "category": "path",
+      "icon": null
+    },
+    {
       "name": "StorePID",
       "exec": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2022\\BuildTools\\Common7\\IDE\\StorePID.exe",
       "aliases": [
@@ -23641,6 +24816,28 @@
     },
     {
       "name": "t32",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\site-packages\\pip\\_vendor\\distlib\\t32.exe",
+      "aliases": [
+        "t32",
+        "t32",
+        "t32"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "t32",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\pip\\_vendor\\distlib\\t32.exe",
+      "aliases": [
+        "t32",
+        "t32",
+        "t32"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "t32",
       "exec": "C:\\Program Files\\Python312\\Lib\\site-packages\\pip\\_vendor\\distlib\\t32.exe",
       "aliases": [
         "t32",
@@ -23663,11 +24860,55 @@
     },
     {
       "name": "t64",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\site-packages\\pip\\_vendor\\distlib\\t64.exe",
+      "aliases": [
+        "t64",
+        "t64",
+        "t64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "t64",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\pip\\_vendor\\distlib\\t64.exe",
+      "aliases": [
+        "t64",
+        "t64",
+        "t64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "t64",
       "exec": "C:\\Program Files\\Python312\\Lib\\site-packages\\pip\\_vendor\\distlib\\t64.exe",
       "aliases": [
         "t64",
         "t64",
         "t64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "t64-arm",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\site-packages\\pip\\_vendor\\distlib\\t64-arm.exe",
+      "aliases": [
+        "t64-arm",
+        "t64-arm",
+        "t64-arm"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "t64-arm",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\pip\\_vendor\\distlib\\t64-arm.exe",
+      "aliases": [
+        "t64-arm",
+        "t64-arm",
+        "t64-arm"
       ],
       "category": "program_files",
       "icon": null
@@ -25672,26 +26913,6 @@
       "icon": null
     },
     {
-      "name": "UndockedFlightingUpdateTask",
-      "exec": "C:\\windows\\system32\\UndockedFlightingUpdateTask.exe",
-      "aliases": [
-        "undockedflightingupdatetask",
-        "undockedflightingupdatetask"
-      ],
-      "category": "path",
-      "icon": null
-    },
-    {
-      "name": "UndockedFlightingUpdateTask",
-      "exec": "C:\\WINDOWS\\system32\\UndockedFlightingUpdateTask.exe",
-      "aliases": [
-        "undockedflightingupdatetask",
-        "undockedflightingupdatetask"
-      ],
-      "category": "path",
-      "icon": null
-    },
-    {
       "name": "unexpand",
       "exec": "C:\\Program Files\\Git\\usr\\bin\\unexpand.exe",
       "aliases": [
@@ -25727,6 +26948,17 @@
     {
       "name": "unins000",
       "exec": "C:\\Program Files\\Git\\unins000.exe",
+      "aliases": [
+        "unins000",
+        "unins000",
+        "unins000"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "unins000",
+      "exec": "C:\\Program Files (x86)\\Inno Setup 6\\unins000.exe",
       "aliases": [
         "unins000",
         "unins000",
@@ -25781,7 +27013,7 @@
     },
     {
       "name": "uninstall",
-      "exec": "C:\\Program Files (x86)\\Google\\GoogleUpdater\\141.0.7376.0\\uninstall.cmd",
+      "exec": "C:\\Program Files (x86)\\Google\\GoogleUpdater\\144.0.7547.0\\uninstall.cmd",
       "aliases": [
         "uninstall",
         "uninstall",
@@ -26215,6 +27447,26 @@
       "icon": "C:\\Program Files (x86)\\WildTangent Games\\App\\GameConsole.ico"
     },
     {
+      "name": "updatecli",
+      "exec": "C:\\windows\\system32\\updatecli.exe",
+      "aliases": [
+        "updatecli",
+        "updatecli"
+      ],
+      "category": "path",
+      "icon": null
+    },
+    {
+      "name": "updatecli",
+      "exec": "C:\\WINDOWS\\system32\\updatecli.exe",
+      "aliases": [
+        "updatecli",
+        "updatecli"
+      ],
+      "category": "path",
+      "icon": null
+    },
+    {
       "name": "updater",
       "exec": "C:\\Program Files\\McAfee\\WebAdvisor\\updater.exe",
       "aliases": [
@@ -26227,7 +27479,7 @@
     },
     {
       "name": "updater",
-      "exec": "C:\\Program Files (x86)\\Google\\GoogleUpdater\\141.0.7376.0\\updater.exe",
+      "exec": "C:\\Program Files (x86)\\Google\\GoogleUpdater\\144.0.7547.0\\updater.exe",
       "aliases": [
         "updater",
         "updater",
@@ -26909,6 +28161,50 @@
         "veiid",
         "veiid",
         "veiid"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "venvlauncher",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\venvlauncher.exe",
+      "aliases": [
+        "venvlauncher",
+        "venvlauncher",
+        "venvlauncher"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "venvlauncher",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\venvlauncher.exe",
+      "aliases": [
+        "venvlauncher",
+        "venvlauncher",
+        "venvlauncher"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "venvwlauncher",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\venvwlauncher.exe",
+      "aliases": [
+        "venvwlauncher",
+        "venvwlauncher",
+        "venvwlauncher"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "venvwlauncher",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\venv\\scripts\\nt\\venvwlauncher.exe",
+      "aliases": [
+        "venvwlauncher",
+        "venvwlauncher",
+        "venvwlauncher"
       ],
       "category": "program_files",
       "icon": null
@@ -28093,6 +29389,28 @@
     },
     {
       "name": "w32",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\site-packages\\pip\\_vendor\\distlib\\w32.exe",
+      "aliases": [
+        "w32",
+        "w32",
+        "w32"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "w32",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\pip\\_vendor\\distlib\\w32.exe",
+      "aliases": [
+        "w32",
+        "w32",
+        "w32"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "w32",
       "exec": "C:\\Program Files\\Python312\\Lib\\site-packages\\pip\\_vendor\\distlib\\w32.exe",
       "aliases": [
         "w32",
@@ -28124,11 +29442,55 @@
     },
     {
       "name": "w64",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\site-packages\\pip\\_vendor\\distlib\\w64.exe",
+      "aliases": [
+        "w64",
+        "w64",
+        "w64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "w64",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\pip\\_vendor\\distlib\\w64.exe",
+      "aliases": [
+        "w64",
+        "w64",
+        "w64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "w64",
       "exec": "C:\\Program Files\\Python312\\Lib\\site-packages\\pip\\_vendor\\distlib\\w64.exe",
       "aliases": [
         "w64",
         "w64",
         "w64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "w64-arm",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Shell 8.0\\lib\\Python3.13\\Lib\\site-packages\\pip\\_vendor\\distlib\\w64-arm.exe",
+      "aliases": [
+        "w64-arm",
+        "w64-arm",
+        "w64-arm"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "w64-arm",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\pip\\_vendor\\distlib\\w64-arm.exe",
+      "aliases": [
+        "w64-arm",
+        "w64-arm",
+        "w64-arm"
       ],
       "category": "program_files",
       "icon": null
@@ -28257,6 +29619,28 @@
         "wbadmin"
       ],
       "category": "path",
+      "icon": null
+    },
+    {
+      "name": "wbadminhelper",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\wbadminhelper.exe",
+      "aliases": [
+        "wbadminhelper",
+        "wbadminhelper",
+        "wbadminhelper"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "wbcopytables",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\wbcopytables.exe",
+      "aliases": [
+        "wbcopytables",
+        "wbcopytables",
+        "wbcopytables"
+      ],
+      "category": "program_files",
       "icon": null
     },
     {
@@ -28762,6 +30146,26 @@
       "icon": null
     },
     {
+      "name": "WinCsFlags",
+      "exec": "C:\\windows\\system32\\WinCsFlags.exe",
+      "aliases": [
+        "wincsflags",
+        "wincsflags"
+      ],
+      "category": "path",
+      "icon": null
+    },
+    {
+      "name": "WinCsFlags",
+      "exec": "C:\\WINDOWS\\system32\\WinCsFlags.exe",
+      "aliases": [
+        "wincsflags",
+        "wincsflags"
+      ],
+      "category": "path",
+      "icon": null
+    },
+    {
       "name": "windmc",
       "exec": "C:\\MinGW\\bin\\windmc.exe",
       "aliases": [
@@ -28920,6 +30324,16 @@
       "icon": null
     },
     {
+      "name": "WindowsPackageManagerMCPServer",
+      "exec": "C:\\Users\\zaidm\\AppData\\Local\\Microsoft\\WindowsApps\\WindowsPackageManagerMCPServer.exe",
+      "aliases": [
+        "windowspackagemanagermcpserver",
+        "windowspackagemanagermcpserver"
+      ],
+      "category": "path",
+      "icon": null
+    },
+    {
       "name": "WindowsPackageManagerServer",
       "exec": "C:\\Users\\zaidm\\AppData\\Local\\Microsoft\\WindowsApps\\WindowsPackageManagerServer.exe",
       "aliases": [
@@ -28970,6 +30384,17 @@
       "icon": null
     },
     {
+      "name": "WinGetDownloader",
+      "exec": "C:\\Program Files\\HPPrintScanDoctor\\WinGetDownloader.exe",
+      "aliases": [
+        "wingetdownloader",
+        "wingetdownloader",
+        "wingetdownloader"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
       "name": "winhlp32",
       "exec": "C:\\windows\\winhlp32.exe",
       "aliases": [
@@ -28987,6 +30412,105 @@
         "winhlp32"
       ],
       "category": "path",
+      "icon": null
+    },
+    {
+      "name": "wininst-10.0",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\_distutils\\command\\wininst-10.0.exe",
+      "aliases": [
+        "wininst-10.0",
+        "wininst-10.0",
+        "wininst-10.0"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "wininst-10.0-amd64",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\_distutils\\command\\wininst-10.0-amd64.exe",
+      "aliases": [
+        "wininst-10.0-amd64",
+        "wininst-10.0-amd64",
+        "wininst-10.0-amd64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "wininst-14.0",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\_distutils\\command\\wininst-14.0.exe",
+      "aliases": [
+        "wininst-14.0",
+        "wininst-14.0",
+        "wininst-14.0"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "wininst-14.0-amd64",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\_distutils\\command\\wininst-14.0-amd64.exe",
+      "aliases": [
+        "wininst-14.0-amd64",
+        "wininst-14.0-amd64",
+        "wininst-14.0-amd64"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "wininst-6.0",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\_distutils\\command\\wininst-6.0.exe",
+      "aliases": [
+        "wininst-6.0",
+        "wininst-6.0",
+        "wininst-6.0"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "wininst-7.1",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\_distutils\\command\\wininst-7.1.exe",
+      "aliases": [
+        "wininst-7.1",
+        "wininst-7.1",
+        "wininst-7.1"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "wininst-8.0",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\_distutils\\command\\wininst-8.0.exe",
+      "aliases": [
+        "wininst-8.0",
+        "wininst-8.0",
+        "wininst-8.0"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "wininst-9.0",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\_distutils\\command\\wininst-9.0.exe",
+      "aliases": [
+        "wininst-9.0",
+        "wininst-9.0",
+        "wininst-9.0"
+      ],
+      "category": "program_files",
+      "icon": null
+    },
+    {
+      "name": "wininst-9.0-amd64",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Workbench 8.0\\swb\\shell\\lib\\Python3.13\\Lib\\site-packages\\setuptools\\_distutils\\command\\wininst-9.0-amd64.exe",
+      "aliases": [
+        "wininst-9.0-amd64",
+        "wininst-9.0-amd64",
+        "wininst-9.0-amd64"
+      ],
+      "category": "program_files",
       "icon": null
     },
     {
@@ -29939,6 +31463,17 @@
         "wpr"
       ],
       "category": "path",
+      "icon": null
+    },
+    {
+      "name": "WritingAssistant",
+      "exec": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WritingAssistant\\WritingAssistant.exe",
+      "aliases": [
+        "writingassistant",
+        "writingassistant",
+        "writingassistant"
+      ],
+      "category": "program_files",
       "icon": null
     },
     {
@@ -31011,9 +32546,20 @@
       ],
       "category": "program_files",
       "icon": null
+    },
+    {
+      "name": "zlib_decompress",
+      "exec": "C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin\\zlib_decompress.exe",
+      "aliases": [
+        "zlib_decompress",
+        "zlib_decompress",
+        "zlib_decompress"
+      ],
+      "category": "program_files",
+      "icon": null
     }
   ],
-  "total_count": 2942,
-  "discovery_date": "C:\\Users\\zaidm\\OneDrive\\Document\\MP\\EchoOS_PySide6",
+  "total_count": 3083,
+  "discovery_date": "C:\\Users\\zaidm\\OneDrive\\Document\\progress - 7\\EchoOS_PySide6",
   "system": "windows"
 }

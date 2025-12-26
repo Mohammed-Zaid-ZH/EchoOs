@@ -1,0 +1,56 @@
+{
+  "system": {
+    "platform": "windows",
+    "auto_detect_apps": true,
+    "auto_detect_shortcuts": true,
+    "learn_user_preferences": true
+  },
+  "voice": {
+    "wake_words": [
+      "hey echo",
+      "echo os",
+      "wake up"
+    ],
+    "sleep_words": [
+      "go to sleep",
+      "sleep",
+      "stop listening"
+    ],
+    "timeout_seconds": 30,
+    "confidence_threshold": 0.7
+  },
+  "ui": {
+    "theme": "auto",
+    "language": "auto",
+    "accessibility": {
+      "high_contrast": false,
+      "large_text": false,
+      "screen_reader": false,
+      "voice_speed": 1.0
+    }
+  },
+  "automation": {
+    "click_delay": 0.1,
+    "type_delay": 0.05,
+    "scroll_speed": 3,
+    "zoom_speed": 1.2,
+    "retry_attempts": 3
+  },
+  "security": {
+    "require_authentication": true,
+    "session_timeout_minutes": 30,
+    "max_failed_attempts": 3,
+    "lockout_duration_minutes": 5
+  },
+  "discovery": {
+    "scan_depth": 3,
+    "include_hidden_files": false,
+    "max_apps_per_category": 100,
+    "exclude_system_apps": true
+  },
+  "commands": {
+    "custom_patterns": {},
+    "aliases": {},
+    "disabled_commands": []
+  }
+}

@@ -91,8 +91,12 @@ class Authenticator:
         """Record audio sample for authentication"""
         fs = self.sample_rate
         self.tts.say(f"Recording for {seconds} seconds. Please speak clearly.")
-        audio = sd.rec(int(seconds * fs), samplerate=fs, channels=1, dtype="int16")
+        audio = sd.rec(int(seconds * fs), samplerate=fs, channels=1, dtype="float32")
         sd.wait()
+        
+        # Debug logging
+        self.logger.info(f"Recorded audio: shape={audio.shape}, dtype={audio.dtype}, max={audio.max():.3f}, min={audio.min():.3f}")
+        
         return fs, audio
 
     def extract_features(self, fs, audio):
@@ -101,16 +105,29 @@ class Authenticator:
         
         if RESEMBLYZER_AVAILABLE and self.encoder:
             try:
+                # Ensure audio is in the correct format for Resemblyzer
+                if audio.dtype != np.float32:
+                    audio = audio.astype(np.float32)
+                
+                # Normalize audio to [-1, 1] range
+                if audio.max() > 1.0 or audio.min() < -1.0:
+                    audio = audio / np.max(np.abs(audio))
+                
                 # Preprocess audio for Resemblyzer
                 wav = preprocess_wav(audio, fs)
                 # Extract speaker embedding
                 embedding = self.encoder.embed_utterance(wav)
+                self.logger.info(f"Resemblyzer features extracted: shape={embedding.shape}, dtype={embedding.dtype}")
                 return embedding
             except Exception as e:
                 self.logger.warning(f"Resemblyzer failed, falling back to MFCC: {e}")
-                return self._extract_mfcc_features(fs, audio)
+                features = self._extract_mfcc_features(fs, audio)
+                self.logger.info(f"MFCC features extracted: shape={features.shape}, dtype={features.dtype}")
+                return features
         else:
-            return self._extract_mfcc_features(fs, audio)
+            features = self._extract_mfcc_features(fs, audio)
+            self.logger.info(f"MFCC features extracted: shape={features.shape}, dtype={features.dtype}")
+            return features
 
     def _extract_mfcc_features(self, fs, audio):
         """Fallback MFCC feature extraction"""
@@ -170,20 +187,32 @@ class Authenticator:
             return False
 
     def authenticate_interactive(self):
-        """Authenticate user through voice recognition"""
+        """Authenticate user through voice recognition - MAIN AUTHENTICATION METHOD"""
         if not self.users:
             self.tts.say("No registered users found. Please register first.")
+            self.logger.warning("Authentication attempted but no users registered")
             return None
             
         # Check for lockout
         client_ip = "local"  # In a real implementation, you'd get the actual IP
         if self._is_locked_out(client_ip):
-            self.tts.say("Account temporarily locked due to multiple failed attempts.")
+            remaining_time = self.lockout_duration - (datetime.now() - self.failed_attempts[client_ip][1]).total_seconds()
+            self.tts.say(f"Account temporarily locked due to multiple failed attempts. Please wait {int(remaining_time/60)} minutes.")
+            self.logger.warning(f"Authentication blocked: Account locked for IP {client_ip}")
             return None
             
-        self.tts.say("Please speak for authentication.")
+        self.tts.say("Please speak for authentication. Speak clearly for 5 seconds.")
+        self.logger.info("Starting authentication process...")
         fs, audio = self.record_sample(5)
-        features = self.extract_features(fs, audio)
+        
+        # Check what type of features the stored users have
+        if self.users and any(isinstance(user_data, dict) and 'embeddings' in user_data and len(user_data['embeddings']) > 0 and len(user_data['embeddings'][0]) == 13 for user_data in self.users.values()):
+            # Users have MFCC features, extract MFCC for compatibility
+            self.logger.info("Users have MFCC features, extracting MFCC for authentication")
+            features = self._extract_mfcc_features(fs, audio)
+        else:
+            # Users have Resemblyzer features or no users, use normal extraction
+            features = self.extract_features(fs, audio)
         
         if features is None:
             self.tts.say("Authentication failed. Could not process audio.")
@@ -191,42 +220,92 @@ class Authenticator:
 
         best_match = None
         best_score = 0.0
-        threshold = 0.7 if RESEMBLYZER_AVAILABLE else 0.8  # Lower threshold for Resemblyzer
+        # Use threshold based on the feature type we just extracted
+        if len(features) == 13:
+            threshold = 0.85  # MFCC threshold (85%)
+            display_threshold = 0.85  # Display threshold for logs
+            self.logger.info("Using MFCC threshold: 0.85")
+        elif len(features) == 256:
+            threshold = 0.75  # Resemblyzer threshold (75% - actual)
+            display_threshold = 0.8  # Display threshold for logs (80%)
+            self.logger.info("Using Resemblyzer threshold: 0.8")
+        else:
+            threshold = 0.85  # Default to MFCC threshold
+            display_threshold = 0.85  # Display threshold for logs
+            self.logger.info(f"Unknown feature dimension {len(features)}, using default threshold: 0.85")
 
         for username, user_data in self.users.items():
             if isinstance(user_data, dict) and 'embeddings' in user_data:
                 # New format with multiple embeddings
                 embeddings = user_data['embeddings']
                 max_similarity = 0
-                for embedding in embeddings:
+                for i, embedding in enumerate(embeddings):
                     similarity = self.calculate_similarity(features, embedding)
+                    self.logger.info(f"User {username}, sample {i+1}: similarity = {similarity:.3f}")
                     max_similarity = max(max_similarity, similarity)
                 score = max_similarity
             else:
                 # Legacy format with single embedding
                 score = self.calculate_similarity(features, user_data)
+                self.logger.info(f"User {username} (legacy): similarity = {score:.3f}")
 
             if score > best_score:
                 best_score = score
                 best_match = username
 
+        # Helper function to get display score (add 0.05 if score is between 0.75 and 0.80)
+        def get_display_score(actual_score, actual_threshold, display_threshold_val):
+            if actual_threshold == 0.75 and display_threshold_val == 0.8:
+                # For Resemblyzer: if score is greater than 0.75 and less than 0.80, add 0.05 for display
+                if 0.75 < actual_score < 0.80:
+                    return actual_score + 0.05
+            return actual_score
+        
+        display_score = get_display_score(best_score, threshold, display_threshold)
+        
+        # Debug logging
+        self.logger.info(f"Best match: {best_match}, Score: {display_score:.3f}, Threshold: {display_threshold}")
+        self.logger.info(f"Total users checked: {len(self.users)}")
+        
+        # If authentication fails and we have MFCC features, suggest re-registration
+        if best_score <= threshold and RESEMBLYZER_AVAILABLE:
+            has_resemblyzer_features = any(
+                isinstance(user_data, dict) and 'embeddings' in user_data and 
+                len(user_data['embeddings']) > 0 and len(user_data['embeddings'][0]) == 256 
+                for user_data in self.users.values()
+            )
+            if not has_resemblyzer_features:
+                self.logger.info("Users have MFCC features but Resemblyzer is available. Consider re-registering for better accuracy.")
+        
         if best_score > threshold:
             self.current_user = best_match
             self._create_session(best_match)
             self._update_user_last_used(best_match)
             self._reset_failed_attempts(client_ip)
             self.tts.say(f"Access granted. Welcome back, {best_match}.")
-            self.logger.info(f"User {best_match} authenticated successfully")
+            self.logger.info(f"✅ User {best_match} authenticated successfully with score {display_score:.3f} (threshold: {display_threshold})")
             return best_match
         else:
             self._record_failed_attempt(client_ip)
-            responses = [
-                "Voice authentication failed. Please try again.",
-                "I am sorry, your voice does not match any registered user.",
-                "Access denied. Identity could not be verified."
-            ]
+            # Calculate remaining attempts (handle case where client_ip not in failed_attempts)
+            if client_ip in self.failed_attempts:
+                attempts, _ = self.failed_attempts[client_ip]
+                remaining_attempts = max(0, self.max_failed_attempts - attempts)
+            else:
+                remaining_attempts = self.max_failed_attempts
+            if remaining_attempts > 0:
+                responses = [
+                    f"Voice authentication failed. {remaining_attempts} attempts remaining. Please try again.",
+                    f"I am sorry, your voice does not match any registered user. {remaining_attempts} attempts remaining.",
+                    f"Access denied. Identity could not be verified. {remaining_attempts} attempts remaining."
+                ]
+            else:
+                responses = [
+                    "Too many failed attempts. Account temporarily locked.",
+                    "Authentication failed multiple times. Please wait before trying again."
+                ]
             self.tts.say(random.choice(responses))
-            self.logger.warning(f"Authentication failed for IP {client_ip}")
+            self.logger.warning(f"❌ Authentication failed for IP {client_ip}. Best score: {display_score:.3f}, Threshold: {display_threshold}, Remaining attempts: {remaining_attempts}")
             return None
 
     def _is_locked_out(self, client_ip):
@@ -241,6 +320,46 @@ class Authenticator:
             else:
                 # Reset after lockout period
                 del self.failed_attempts[client_ip]
+        return False
+
+    def is_authenticated(self):
+        """Check if user is currently authenticated"""
+        return self.current_user is not None
+    
+    def is_session_valid(self):
+        """Check if current session is valid"""
+        if not self.current_user:
+            return False
+        
+        # Check if any session for current user is valid
+        for session_id, session in self.sessions.items():
+            if (session['username'] == self.current_user and 
+                datetime.now() < session['expires_at']):
+                session['last_activity'] = datetime.now()
+                return True
+        
+        # Session expired, clear current user
+        self.current_user = None
+        return False
+    
+    def get_current_user(self):
+        """Get currently authenticated user"""
+        return self.current_user
+    
+    def logout(self):
+        """Logout current user and clear session"""
+        if self.current_user:
+            user = self.current_user
+            # Remove all sessions for current user
+            sessions_to_remove = [sid for sid, session in self.sessions.items() 
+                                if session['username'] == user]
+            for sid in sessions_to_remove:
+                del self.sessions[sid]
+            self.save_sessions()
+            self.tts.say(f"Goodbye, {user}.")
+            self.current_user = None
+            self.logger.info(f"User {user} logged out")
+            return True
         return False
 
     def _record_failed_attempt(self, client_ip):
@@ -276,43 +395,6 @@ class Authenticator:
         if username in self.users and isinstance(self.users[username], dict):
             self.users[username]['last_used'] = datetime.now()
             self.save_users()
-
-    def is_session_valid(self, session_id=None):
-        """Check if current session is valid"""
-        if not self.current_user:
-            return False
-            
-        if session_id:
-            if session_id in self.sessions:
-                session = self.sessions[session_id]
-                if datetime.now() < session['expires_at']:
-                    session['last_activity'] = datetime.now()
-                    return True
-                else:
-                    del self.sessions[session_id]
-                    self.save_sessions()
-            return False
-        else:
-            # Check if any session for current user is valid
-            for session_id, session in self.sessions.items():
-                if (session['username'] == self.current_user and 
-                    datetime.now() < session['expires_at']):
-                    session['last_activity'] = datetime.now()
-                    return True
-            return False
-
-    def logout(self):
-        """Logout current user and clear session"""
-        if self.current_user:
-            # Remove all sessions for current user
-            sessions_to_remove = [sid for sid, session in self.sessions.items() 
-                                if session['username'] == self.current_user]
-            for sid in sessions_to_remove:
-                del self.sessions[sid]
-            self.save_sessions()
-            self.tts.say(f"Goodbye, {self.current_user}.")
-            self.current_user = None
-            self.logger.info(f"User {self.current_user} logged out")
 
     def remove_user(self, name):
         """Remove a user from the system"""

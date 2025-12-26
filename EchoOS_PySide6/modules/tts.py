@@ -39,6 +39,10 @@ class TTS:
     def _speak_with_separate_engine(self, text):
         """Speak using a separate engine instance for reliability"""
         try:
+            if not PYTTSX3_AVAILABLE:
+                print(f"[TTS] {text} (TTS engine not available)")
+                return
+            
             import pyttsx3
             
             # Create fresh engine instance
@@ -49,18 +53,25 @@ class TTS:
             engine.setProperty('volume', 0.9)
             
             # Try to use a female voice if available
-            voices = engine.getProperty('voices')
-            if voices:
-                for voice in voices:
-                    if 'female' in voice.name.lower() or 'zira' in voice.name.lower():
-                        engine.setProperty('voice', voice.id)
-                        break
+            try:
+                voices = engine.getProperty('voices')
+                if voices:
+                    for voice in voices:
+                        if 'female' in voice.name.lower() or 'zira' in voice.name.lower():
+                            engine.setProperty('voice', voice.id)
+                            break
+            except:
+                pass  # Use default voice if selection fails
             
             # Speak the text
             engine.say(text)
             engine.runAndWait()
             
             # Clean up
+            try:
+                engine.stop()
+            except:
+                pass
             del engine
             
             self.logger.info(f"TTS completed: {text[:30]}...")
@@ -68,6 +79,8 @@ class TTS:
         except Exception as e:
             self.logger.error(f"TTS separate engine error: {e}")
             print(f"[TTS Error] {e}")
+            import traceback
+            self.logger.debug(traceback.format_exc())
     
     def say_sync(self, text):
         """Synchronous TTS (blocking)"""
@@ -79,53 +92,43 @@ class TTS:
     
     def is_busy(self):
         """Check if TTS is currently speaking"""
-        if self.engine:
-            try:
-                return self.engine._inLoop
-            except:
-                return False
+        # With separate engine approach, we can't track this easily
+        # Return False as we create new engines each time
         return False
     
     def stop_speaking(self):
         """Stop current speech"""
-        if self.engine:
-            try:
-                self.engine.stop()
-            except Exception as e:
-                self.logger.error(f"Error stopping TTS: {e}")
+        # With separate engine approach, we can't easily stop
+        # This is a limitation of the separate engine approach
+        pass
     
     def set_rate(self, rate):
         """Set speech rate (words per minute)"""
-        if self.engine:
-            try:
-                self.engine.setProperty('rate', rate)
-            except Exception as e:
-                self.logger.error(f"Error setting TTS rate: {e}")
+        # Store rate for future use (not used with separate engines)
+        self._rate = rate
     
     def set_volume(self, volume):
         """Set volume (0.0 to 1.0)"""
-        if self.engine:
-            try:
-                self.engine.setProperty('volume', max(0.0, min(1.0, volume)))
-            except Exception as e:
-                self.logger.error(f"Error setting TTS volume: {e}")
+        # Store volume for future use (not used with separate engines)
+        self._volume = max(0.0, min(1.0, volume))
     
     def get_voices(self):
         """Get available voices"""
-        if self.engine:
-            try:
-                return self.engine.getProperty('voices')
-            except:
-                return []
+        try:
+            if PYTTSX3_AVAILABLE:
+                import pyttsx3
+                engine = pyttsx3.init()
+                voices = engine.getProperty('voices')
+                del engine
+                return voices
+        except:
+            pass
         return []
     
     def set_voice(self, voice_id):
         """Set specific voice by ID"""
-        if self.engine:
-            try:
-                self.engine.setProperty('voice', voice_id)
-            except Exception as e:
-                self.logger.error(f"Error setting TTS voice: {e}")
+        # Store voice for future use (not used with separate engines)
+        self._voice_id = voice_id
     
     def __del__(self):
         """Cleanup when TTS object is destroyed"""

@@ -291,13 +291,44 @@ class AppDiscovery:
     def _discover_portable_apps(self):
         """Discover portable applications from common locations"""
         apps = []
-        portable_dirs = [
-            os.path.join(os.environ.get("USERPROFILE", ""), "Desktop"),
-            os.path.join(os.environ.get("USERPROFILE", ""), "Downloads"),
-            "C:\\PortableApps",
-            "D:\\PortableApps",
-            "E:\\PortableApps"
-        ]
+        
+        # Universal portable app directories
+        portable_dirs = []
+        
+        # Get user directories dynamically
+        home_dir = os.path.expanduser("~")
+        portable_dirs.extend([
+            os.path.join(home_dir, "Desktop"),
+            os.path.join(home_dir, "Downloads"),
+            os.path.join(home_dir, "PortableApps"),
+            os.path.join(home_dir, "Apps"),
+            os.path.join(home_dir, "Applications")
+        ])
+        
+        # Platform-specific directories
+        if self.system == "windows":
+            # Windows drive letters
+            for drive in "CDEFGHIJKLMNOPQRSTUVWXYZ":
+                portable_dirs.extend([
+                    f"{drive}:\\PortableApps",
+                    f"{drive}:\\Apps",
+                    f"{drive}:\\Applications"
+                ])
+        elif self.system == "darwin":
+            # macOS directories
+            portable_dirs.extend([
+                "/Applications/Portable",
+                "/usr/local/bin",
+                "/opt"
+            ])
+        else:
+            # Linux directories
+            portable_dirs.extend([
+                "/opt",
+                "/usr/local/bin",
+                "/usr/bin",
+                "/snap/bin"
+            ])
         
         for portable_dir in portable_dirs:
             if not os.path.exists(portable_dir):
